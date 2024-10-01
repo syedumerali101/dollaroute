@@ -12,6 +12,7 @@ import Welcome from './src/screens/Welcome';
 import Login from './src/screens/Login';
 import ForgotPassword from './src/screens/ForgotPassword';
 import EmailSent from './src/screens/EmailSent';
+import ResetPassword from './src/screens/ResetPassword';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <Welcome /> */}
       {/* <Login /> */}
       {/* <ForgotPassword /> */}
-      <EmailSent />
+      {/* <EmailSent /> */}
+      <ResetPassword />
     </SafeAreaView>
   );
 }
