@@ -3,6 +3,7 @@
   "navTitles": {
     "signup": "Sign Up",
     "login": "Login",
+    "verification": "Verification",
     "forgotPassword": "Forgot Password",
     "resetPassword": "Reset Password"
   },
@@ -24,6 +25,11 @@
     "textBtnText": "Forgot Password?",
     "descriptionText": "Don’t have an account yet?",
     "underlineText": "Sign Up"
+  },
+
+  "verificationScreen": {
+      "heading": "Enter your Verification Code",
+      "submitBtnText": "Verify"
   },
 
   "signupScreen": {
