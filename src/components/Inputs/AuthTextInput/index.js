@@ -22,14 +22,13 @@ const AuthTextInput = props => {
   return (
     <View
       style={[focus ? styles.customStyle : styles.textInputView, props.style]}>
-      <View style={styles.emailIconView}></View>
       <TextInput
         ref={inputRef}
         value={props.value}
         onChangeText={props.onChangeText}
         style={styles.textInputStyle}
         placeholder={props.placeHolder}
-        placeholderTextColor={'red'}
+        placeholderTextColor={Colors.lightMode.grey7}
         secureTextEntry={props.type && showEye ? true : false}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
@@ -38,18 +37,19 @@ const AuthTextInput = props => {
       />
       {props.type === 'password' ? (
         <TouchableOpacity
+          activeOpacity={1}
           style={{width: '5%', justifyContent: 'center', alignItems: 'center'}}
           onPress={() => setShowEye(!showEye)}>
           <Image
             source={Images.loginScreen.eye}
             style={{
-              height: Metrics.ratio(5),
-              width: Metrics.ratio(5),
+              height: Metrics.ratio(15),
+              width: Metrics.ratio(15),
               marginRight: Metrics.ratio(10),
               resizeMode: 'contain',
               tintColor: !showEye
-                ? Colors.lightMode.black1
-                : Colors.lightMode.grey,
+                ? Colors.lightMode.pink
+                : Colors.lightMode.grey5,
             }}
           />
         </TouchableOpacity>

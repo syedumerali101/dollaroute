@@ -1,22 +1,22 @@
 import {StyleSheet} from 'react-native';
-import { Colors, Metrics } from '../../../theme';
+import {Colors, Metrics} from '../../../theme';
 
 export default style = StyleSheet.create({
   textInputView: {
-    width: Metrics.screenWidth * 1,
+    width: Metrics.screenWidth * 0.9,
     height: Metrics.ratio(40),
-    borderColor: 'red',
+    borderColor: Colors.lightMode.grey6,
     borderWidth: Metrics.ratio(1),
     flexDirection: 'row',
-    borderRadius: Metrics.ratio(2),
+    borderRadius: Metrics.ratio(8),
     marginTop: Metrics.ratio(10),
   },
 
   customStyle: {
-    width: Metrics.screenWidth * 8,
-    height:Metrics.ratio(10),
-    borderColor: Colors.lightMode.grey,
-    borderWidth: Metrics.ratio(2),
+    width: Metrics.screenWidth * 0.9,
+    height: Metrics.ratio(40),
+    borderColor: Colors.lightMode.pink,
+    borderWidth: 1,
     flexDirection: 'row',
     borderRadius: Metrics.ratio(10),
     marginTop: Metrics.ratio(10),
@@ -24,8 +24,8 @@ export default style = StyleSheet.create({
 
   textInputStyle: {
     marginLeft: Metrics.ratio(10),
-    color:  Colors.lightMode.grey,
-    width: Metrics.screenWidth * 0.2,
+    color: Colors.lightMode.black1,
+    width: Metrics.screenWidth * 0.8,
   },
 
   emailStyle: {

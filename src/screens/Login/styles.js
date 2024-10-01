@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
     },
 
     inputFieldContainer:{
-        marginHorizontal: Metrics.screenWidth * 0.2
+    },
+
+    mainRender:{
     }
 })
 

@@ -12,5 +12,10 @@
     "welcomeDesc3": "Easily monitor your cashback balance and redeem your earnings through PayPal or other options",
     "signupBtnTitle": "Sign Up",
     "loginBtnTitle": "Login"
+  },
+
+  "loginScreen": {
+    "email": "Email",
+    "password": "Password"
   }
 }

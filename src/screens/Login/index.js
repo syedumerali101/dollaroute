@@ -9,13 +9,21 @@ const Login = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const scrollViewRef = useRef();
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
-  const handleEmail = email => {
-    console.log(email, 'email');
+  const handleEmail = receivedEmail => {
+    console.log(receivedEmail, 'email');
+    setEmail(receivedEmail);
   };
 
-  const handlePassword = password => {
-    console.log(password, 'email');
+  const handlePassword = receivedPassword => {
+    console.log(receivedPassword, 'password');
+    setPassword(receivedPassword);
+  };
+
+  const onSubmit = () => {
+    console.log(email, password, 'email and password');
   };
 
   const renderInputFields = () => {
@@ -24,14 +32,19 @@ const Login = () => {
         <AuthTextInput
           value={email}
           onChangeText={text => handleEmail(text)}
-          placeHolder="Enter Your Email Address"
+          placeHolder={en.loginScreen.email}
           keyboardType="email-address"
+          reference={emailRef}
+          onSubmitEditing={() => passwordRef.current.focus()}
         />
 
         <AuthTextInput
           value={password}
           onChangeText={text => handlePassword(text)}
+          placeHolder={en.loginScreen.password}
           type="password"
+          reference={passwordRef}
+          onSubmitEditing={onSubmit}
         />
       </View>
     );
@@ -44,7 +57,7 @@ const Login = () => {
       style={styles.mainScrollViewStyle}
       contentContainerStyle={styles.contentContainerStyle}>
       <Header title={en.navTitles.login} />
-      {renderInputFields()}
+      <View style={styles.mainRender}>{renderInputFields()}</View>
     </ScrollView>
   );
 };
