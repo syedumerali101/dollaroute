@@ -5,6 +5,7 @@ import {Colors, Metrics} from '../../../theme';
 const SubmitButton = ({title, disabled, style, type, textStyle, onPress}) => {
   return (
     <TouchableOpacity
+      activeOpacity={1}
       disabled={disabled ? disabled : false}
       style={[styles.touchableButtonStyle, style]}
       onPress={onPress}>

@@ -16,6 +16,10 @@
 
   "loginScreen": {
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "submitBtnText": "Login",
+    "textBtnText": "Forgot Password?",
+    "descriptionText": "Don’t have an account yet?",
+    "underlineText": "Sign Up"
   }
 }

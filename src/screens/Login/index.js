@@ -4,6 +4,9 @@ import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';
 import en from '../../translations/en.json';
+import SubmitButton from '../../components/Buttons/SubmitButton';
+import TextButton from '../../components/Buttons/TextButton';
+import DescTextButton from '../../components/Buttons/DescTextButton';
 
 const Login = () => {
   const [email, setEmail] = useState(null);
@@ -45,6 +48,18 @@ const Login = () => {
           type="password"
           reference={passwordRef}
           onSubmitEditing={onSubmit}
+        />
+
+        <SubmitButton
+          title={en.loginScreen.submitBtnText}
+          style={styles.submitButtonStyle}
+        />
+
+        <TextButton text={en.loginScreen.textBtnText} />
+
+        <DescTextButton
+          description={en.loginScreen.descriptionText}
+          underlineText={en.loginScreen.underlineText}
         />
       </View>
     );
