@@ -11,7 +11,13 @@ const loginScreen = {
   leftArrow: require('../assets/leftArrow.png')
 };
 
+const emailSentScreen = {
+  emailSent: require('../assets/emailSent.png'),
+
+}
+
 export default {
   welcomeScreen,
   loginScreen,
+  emailSentScreen
 };

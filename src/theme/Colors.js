@@ -36,6 +36,7 @@ const lightMode = {
   primaryText: "#4D4D4D",
   black1: '#212325',
   black2: "#0D0E0F",
+  black3: "#292B2D",
   textColor: "#020708",
   white: '#FFFFFF',
   white2: '#FFFAF5',
