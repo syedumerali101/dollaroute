@@ -35,6 +35,7 @@ const lightMode = {
   background: "#EBEBEB",
   primaryText: "#4D4D4D",
   black1: '#212325',
+  black2: "#0D0E0F",
   textColor: "#020708",
   white: '#FFFFFF',
   white2: '#FFFAF5',

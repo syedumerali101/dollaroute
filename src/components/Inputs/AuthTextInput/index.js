@@ -21,7 +21,7 @@ const AuthTextInput = props => {
   };
   return (
     <View
-      style={[focus ? styles.customStyle : styles.textInputView, props.style]}>
+      style={[focus ? styles.customStyle : styles.textInputView, props.containerStyle]}>
       <TextInput
         ref={inputRef}
         value={props.value}

@@ -2,6 +2,7 @@
   "title": "Dollaroute",
   "navTitles": {
     "login": "Login",
+    "forgotPassword": "Forgot Password"
   },
   "welcomeScreens": {
     "welcomeTitle1": "Earn Cashback on Every Purchase",
@@ -21,5 +22,12 @@
     "textBtnText": "Forgot Password?",
     "descriptionText": "Don’t have an account yet?",
     "underlineText": "Sign Up"
+  },
+
+  "forgotPassword": {
+    "heading": "Don’t worry. Enter your email and we’ll send you a link to reset your password.",
+    "email": "Email",
+    "submitBtnText": "continue",
+
   }
 }
