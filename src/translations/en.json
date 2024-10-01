@@ -1,6 +1,7 @@
 {
   "title": "Dollaroute",
   "navTitles": {
+    "signup": "Sign Up",
     "login": "Login",
     "forgotPassword": "Forgot Password",
     "resetPassword": "Reset Password"
@@ -23,6 +24,18 @@
     "textBtnText": "Forgot Password?",
     "descriptionText": "Don’t have an account yet?",
     "underlineText": "Sign Up"
+  },
+
+  "signupScreen": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submitBtnText": "Sign Up",
+    "textBtnText": "Forgot Password?",
+    "descriptionText": "Already have an account?",
+    "underlineText": "Login",
+    "seperatorText": "Or with",
+    "secondaryBtnText": "Sign Up with Google"
   },
 
   "forgotPassword": {

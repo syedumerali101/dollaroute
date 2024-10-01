@@ -13,15 +13,17 @@ import Login from './src/screens/Login';
 import ForgotPassword from './src/screens/ForgotPassword';
 import EmailSent from './src/screens/EmailSent';
 import ResetPassword from './src/screens/ResetPassword';
+import Signup from './src/screens/Signup';
 
 function App() {
   return (
     <SafeAreaView style={styles.mainContainer}>
       {/* <Welcome /> */}
+      <Signup />
       {/* <Login /> */}
       {/* <ForgotPassword /> */}
       {/* <EmailSent /> */}
-      <ResetPassword />
+      {/* <ResetPassword /> */}
     </SafeAreaView>
   );
 }

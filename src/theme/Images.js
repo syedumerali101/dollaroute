@@ -6,6 +6,10 @@ const welcomeScreen = {
   welcome3: require('../assets/welcome3.png'),
 };
 
+const signupScreen = {
+  google: require('../assets/google.png')
+}
+
 const loginScreen = {
   eye: require('../assets/eye.png'),
   leftArrow: require('../assets/leftArrow.png')
@@ -18,6 +22,7 @@ const emailSentScreen = {
 
 export default {
   welcomeScreen,
+  signupScreen,
   loginScreen,
   emailSentScreen
 };
