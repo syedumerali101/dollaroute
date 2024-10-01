@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Text, View, ScrollView} from 'react-native';
+import {Text, View, ScrollView, Alert} from 'react-native';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -9,11 +9,13 @@ import TextButton from '../../components/Buttons/TextButton';
 import DescTextButton from '../../components/Buttons/DescTextButton';
 import IconButton from '../../components/Buttons/IconButton';
 import Images from '../../theme/Images';
+import CheckboxButton from '../../components/Buttons/CheckboxButton';
 
 const Signup = () => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [checked, setChecked] = useState(false);
   const scrollViewRef = useRef();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -32,6 +34,10 @@ const Signup = () => {
   const handlePassword = receivedPassword => {
     console.log(receivedPassword, 'password');
     setPassword(receivedPassword);
+  };
+
+  const handleCheck = () => {
+    setChecked(!checked);
   };
 
   const onSubmit = () => {
@@ -64,6 +70,16 @@ const Signup = () => {
           type="password"
           reference={passwordRef}
           onSubmitEditing={onSubmit}
+        />
+
+        <CheckboxButton
+          text={en.signupScreen.lightText}
+          mainText={en.signupScreen.mainText}
+          checked={checked}
+          onPress={handleCheck}
+          onSubBtnPress={() =>
+            alert('will be redirected to terms and conditions')
+          }
         />
 
         <SubmitButton

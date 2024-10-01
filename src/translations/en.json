@@ -35,7 +35,9 @@
     "descriptionText": "Already have an account?",
     "underlineText": "Login",
     "seperatorText": "Or with",
-    "secondaryBtnText": "Sign Up with Google"
+    "secondaryBtnText": "Sign Up with Google",
+    "lightText": "By signing up, you agree to the",
+    "mainText": "Terms of Service and Privacy Policy",
   },
 
   "forgotPassword": {
