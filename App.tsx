@@ -6,21 +6,24 @@
  */
 
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, SafeAreaView} from 'react-native';
 
 import Welcome from './src/screens/Welcome';
+import Login from './src/screens/Login';
 
 function App() {
   return (
-    <View style={styles.mainContainer}>
-      <Welcome />
-    </View>
+    <SafeAreaView style={styles.mainContainer}>
+      {/* <Welcome /> */}
+      <Login />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#fff',
   },
 });
 

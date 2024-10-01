@@ -1,5 +1,8 @@
 {
   "title": "Dollaroute",
+  "navTitles": {
+    "login": "Login",
+  },
   "welcomeScreens": {
     "welcomeTitle1": "Earn Cashback on Every Purchase",
     "welcomeDesc1": "Get rewarded for shopping at your favorite stores. Earn cashback with every transaction, both online and in-store.",
