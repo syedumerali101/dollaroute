@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginBottom: Metrics.ratio(10),
+    marginTop: Metrics.ratio(10)
   },
 
   nextButtonContainer: {
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     width: Metrics.screenWidth * 0.6,
-    height: Metrics.screenHeight * 0.5,
+    height: Metrics.screenHeight * 0.4,
     alignSelf: 'center',
   },
 

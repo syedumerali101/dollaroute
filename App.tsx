@@ -19,10 +19,10 @@ import Verification from './src/screens/Verification';
 function App() {
   return (
     <SafeAreaView style={styles.mainContainer}>
-      {/* <Welcome /> */}
+      <Welcome />
       {/* <Signup /> */}
       {/* <Login /> */}
-      <Verification />
+      {/* <Verification /> */}
       {/* <ForgotPassword /> */}
       {/* <EmailSent /> */}
       {/* <ResetPassword /> */}
