@@ -29,7 +29,10 @@
 
   "verificationScreen": {
       "heading": "Enter your Verification Code",
-      "submitBtnText": "Verify"
+      "submitBtnText": "Verify",
+      "sentDesc": "We send verification code to your email",
+      "checkInbox": "You can check your inbox",
+      "didNotReceive": "I didn’t received the code? Send again"
   },
 
   "signupScreen": {

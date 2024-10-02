@@ -1,6 +1,8 @@
 import Images from '../theme/Images';
 import en from '../translations/en.json';
 
+export const verificationEmail = 'brajaoma*****@gmail.com';
+
 export const onboarding_screens = () => [
   {
     id: 1,

@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
 
   codeFieldRoot: {
     marginTop: Metrics.ratio(20),
+    marginBottom: Metrics.ratio(20),
     width: Metrics.screenWidth * 0.4,
     alignItems: 'center'
   },
@@ -56,6 +57,47 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     alignSelf: 'center',
   },
+
+  timerView:{
+    justifyContent: 'center',
+  },
+
+  timerStyle:{
+    color: Colors.lightMode.pink,
+    fontSize: Metrics.ratio(12),
+    fontWeight: '600'
+  },
+
+  didNotReceiveBtn:{
+    marginTop: Metrics.ratio(15),
+    marginLeft: Metrics.ratio(10)
+  },
+
+  didNotReceiveText:{
+    color: Colors.lightMode.pink,
+    textDecorationLine: 'underline',
+    fontWeight: '500',
+    fontSize: Metrics.ratio(10)
+  },
+
+  descriptionContainer:{
+    marginTop: Metrics.ratio(10),
+    marginLeft: Metrics.ratio(10),
+    width: Metrics.screenWidth * 0.8
+  },
+
+  sentVerificationTextStyle:{
+    color: Colors.lightMode.black3,
+    fontSize: Metrics.ratio(10),
+    fontWeight: '500'
+  },
+
+  emailText:{
+    color: Colors.lightMode.pink,
+    fontSize: Metrics.ratio(10),
+     fontWeight: '500'
+
+  }
 });
 
 export default styles;

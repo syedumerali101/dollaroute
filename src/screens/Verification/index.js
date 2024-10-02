@@ -1,5 +1,12 @@
-import React, {useState, useRef} from 'react';
-import {I18nManager, ScrollView, Text, TextInput, View} from 'react-native';
+import React, {useState, useRef, useEffect} from 'react';
+import {
+  I18nManager,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import en from '../../translations/en.json';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -10,6 +17,8 @@ import {
   useBlurOnFulfill,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
+import moment from 'moment';
+import {verificationEmail} from '../../configs/Constants';
 
 const Verification = () => {
   const scrollViewRef = useRef(null);
@@ -20,8 +29,29 @@ const Verification = () => {
     value,
     setValue,
   });
+  const [countdown, setCountdown] = useState(90);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (countdown > 0) {
+        setCountdown(countdown - 1);
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [countdown]);
+
+  const handleResetCountdown = () => {
+    setCountdown(90);
+  };
 
   const renderInputFields = () => {
+    const minutes = Math.floor(countdown / 60);
+    const seconds = countdown % 60;
+    const formattedTime = moment({minutes, seconds}).format('m:ss');
     return (
       <View style={styles.mainInputContainer}>
         <Text style={styles.headingTextStyle}>
@@ -58,9 +88,32 @@ const Verification = () => {
                 </View>
               );
             }
-            return <View style={styles.defaultCellContainer}></View>
+            return <View style={styles.defaultCellContainer}></View>;
           }}
         />
+
+        {
+          countdown > 0 && <View style={styles.timerView}>
+          <Text style={styles.timerStyle}>{formattedTime}</Text>
+        </View>
+        }
+     
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.sentVerificationTextStyle}>
+            {en.verificationScreen.sentDesc}{' '}
+            <Text style={styles.emailText}>{verificationEmail}.</Text>{' '}
+            {en.verificationScreen.checkInbox}
+          </Text>
+        </View>
+
+        <TouchableOpacity
+          onPress={handleResetCountdown}
+          style={styles.didNotReceiveBtn}
+          activeOpacity={1}>
+          <Text style={styles.didNotReceiveText}>
+            {en.verificationScreen.didNotReceive}
+          </Text>
+        </TouchableOpacity>
 
         <SubmitButton
           title={en.verificationScreen.submitBtnText}
@@ -69,6 +122,7 @@ const Verification = () => {
       </View>
     );
   };
+
   return (
     <ScrollView
       keyboardShouldPersistTaps="handled"
