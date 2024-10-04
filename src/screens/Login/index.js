@@ -8,7 +8,7 @@ import SubmitButton from '../../components/Buttons/SubmitButton';
 import TextButton from '../../components/Buttons/TextButton';
 import DescTextButton from '../../components/Buttons/DescTextButton';
 
-const Login = () => {
+const Login = ({navigation}) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const scrollViewRef = useRef();
@@ -53,13 +53,18 @@ const Login = () => {
         <SubmitButton
           title={en.loginScreen.submitBtnText}
           style={styles.submitButtonStyle}
+          onPress={() => navigation.navigate('Verification')}
         />
 
-        <TextButton text={en.loginScreen.textBtnText} />
+        <TextButton
+          text={en.loginScreen.textBtnText}
+          onPress={() => navigation.navigate('ForgotPassword')}
+        />
 
         <DescTextButton
           description={en.loginScreen.descriptionText}
           underlineText={en.loginScreen.underlineText}
+          onPress={() => navigation.navigate('Signup')}
         />
       </View>
     );

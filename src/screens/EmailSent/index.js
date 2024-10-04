@@ -5,7 +5,7 @@ import {Colors, Metrics} from '../../theme';
 import Images from '../../theme/Images';
 import en from '../../translations/en.json';
 
-const EmailSent = () => {
+const EmailSent = ({navigation}) => {
   return (
     <View style={styles.mainRender}>
       <View style={styles.imageView}>
@@ -23,6 +23,7 @@ const EmailSent = () => {
       <SubmitButton
         title={en.emailSent.submitBtnText}
         style={styles.submitButtonStyle}
+        onPress={() => navigation.navigate('Login')}
       />
     </View>
   );
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   imageView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Metrics.ratio(30)
+    marginTop: Metrics.ratio(30),
   },
 
   imageStyle: {
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
   textDetailsContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Metrics.ratio(15)
+    marginTop: Metrics.ratio(15),
   },
 
   headingStyle: {

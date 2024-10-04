@@ -6,7 +6,7 @@ import en from '../../translations/en.json';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 
-const ForgotPassword = () => {
+const ForgotPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const emailRef = useRef(null);
   const [email, setEmail] = useState(null);
@@ -38,6 +38,7 @@ const ForgotPassword = () => {
         <SubmitButton
           title={en.forgotPassword.submitBtnText}
           style={styles.submitButtonStyle}
+          onPress={() => navigation.navigate('EmailSent')}
         />
       </View>
     );

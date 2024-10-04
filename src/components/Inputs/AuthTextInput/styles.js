@@ -5,7 +5,7 @@ export default style = StyleSheet.create({
   textInputView: {
     width: Metrics.screenWidth * 0.9,
     height: Metrics.ratio(40),
-    borderColor: Colors.lightMode.grey6,
+    borderColor: Colors.lightMode.grey8,
     borderWidth: Metrics.ratio(1.5),
     flexDirection: 'row',
     borderRadius: Metrics.ratio(8),

@@ -14,7 +14,7 @@ import en from '../../translations/en.json';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import {onboarding_screens} from '../../configs/Constants';
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
   const {width} = Dimensions.get('window');
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const flatListRef = React.useRef();
@@ -24,17 +24,6 @@ const Welcome = () => {
   const onViewChangeRef = React.useRef(({viewableItems, changed}) => {
     setCurrentIndex(viewableItems[0].index);
   });
-
-  const handleNextPress = () => {
-    if (currentIndex < 2) {
-      flatListRef?.current?.scrollToIndex({
-        index: currentIndex + 1,
-        animated: true,
-      });
-    } else {
-      NavigationService.navigate('Welcome');
-    }
-  };
 
   const Dots = () => {
     const dotPosition = Animated.divide(scrollX, width);
@@ -85,8 +74,12 @@ const Welcome = () => {
   function renderFooter() {
     return (
       <View style={styles.footerRow}>
-        <SubmitButton title={en.welcomeScreens.signupBtnTitle} />
         <SubmitButton
+          onPress={() => navigation.navigate('Signup')}
+          title={en.welcomeScreens.signupBtnTitle}
+        />
+        <SubmitButton
+          onPress={() => navigation.navigate('Login')}
           title={en.welcomeScreens.loginBtnTitle}
           style={styles.touchableButtonStyle}
           textStyle={styles.textStyle}
@@ -185,7 +178,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: Metrics.ratio(10)
+    marginTop: Metrics.ratio(10),
   },
 
   nextButtonContainer: {

@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Colors, Metrics} from '../../theme';
 import Images from '../../theme/Images';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = ({title}) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.headerContainer}>
+    <TouchableOpacity activeOpacity={1} onPress={() => navigation?.goBack()} style={styles.headerContainer}>
       <View style={styles.leftView}>
         <Image
           style={styles.leftIconStyle}
@@ -23,7 +25,7 @@ const Header = ({title}) => {
           source={Images.loginScreen.leftArrow}
         />
       </View> */}
-    </View>
+    </TouchableOpacity>
   );
 };
 
