@@ -53,6 +53,7 @@ const lightMode = {
   grey6: '#F1F1FA',
   grey7: '#91919F',
   grey8: '#E0E2E9',
+  grey9: '#878787',
   pink: "#F43F5E",
   lightPink: "#EEE5FF",
   lightPink2: "#FCC5CF",

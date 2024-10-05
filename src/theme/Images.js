@@ -17,12 +17,20 @@ const loginScreen = {
 
 const emailSentScreen = {
   emailSent: require('../assets/emailSent.png'),
+}
 
+const tabs = {
+  home: require('../assets/home.png'),
+  store: require('../assets/store.png'),
+  deals: require('../assets/deals.png'),
+  categories: require('../assets/categories.png'),
+  profile: require('../assets/profile.png'),
 }
 
 export default {
   welcomeScreen,
   signupScreen,
   loginScreen,
-  emailSentScreen
+  emailSentScreen,
+  tabs
 };

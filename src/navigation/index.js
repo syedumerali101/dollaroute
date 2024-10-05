@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import React, {useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import AuthStack from './AuthStack';
+import TabNavigator from './TabNavigator';
 
 function Navigation() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <AuthStack />
+        {/* <AuthStack /> */}
+
+        <TabNavigator />
       </NavigationContainer>
     </SafeAreaProvider>
   );
