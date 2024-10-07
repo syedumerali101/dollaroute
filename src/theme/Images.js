@@ -33,6 +33,10 @@ const tabs = {
   profile: require('../assets/profile.png'),
 };
 
+const dummy = {
+  bannerImage: require('../assets/bannerImage.png')
+}
+
 export default {
   welcomeScreen,
   signupScreen,
@@ -40,4 +44,5 @@ export default {
   emailSentScreen,
   tabs,
   common,
+  dummy
 };

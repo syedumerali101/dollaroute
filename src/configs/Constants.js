@@ -23,3 +23,37 @@ export const onboarding_screens = () => [
     description: en.welcomeScreens.welcomeDesc3,
   },
 ];
+
+export const bannerData = () => [
+  {
+    id: 1,
+    type: 'Microphones',
+    price: '$108.20',
+    beforeDiscount: '$199.99',
+    title: 'RØDE PodMic',
+    description: 'Dynamic microphone, Speaker microphone',
+    image: Images.dummy.bannerImage
+  },
+
+  {
+    id: 2,
+    type: 'Microphones',
+    price: '$108.20',
+    beforeDiscount: '$199.99',
+    title: 'RØDE PodMic',
+    description: 'Dynamic microphone, Speaker microphone',
+    image: Images.dummy.bannerImage
+  },
+
+  {
+    id: 3,
+    type: 'Microphones',
+    price: '$108.20',
+    beforeDiscount: '$199.99',
+    title: 'RØDE PodMic',
+    description: 'Dynamic microphone, Speaker microphone',
+    image: Images.dummy.bannerImage
+  },
+]
+
+
