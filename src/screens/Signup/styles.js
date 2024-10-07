@@ -3,8 +3,12 @@ import {Colors, Metrics} from '../../theme';
 import { memo } from 'react';
 
 const styles = StyleSheet.create({
+  safeAreaView: {
+    flex: 1
+  },
   mainScrollViewStyle: {
     flex: 1,
+    backgroundColor: Colors.white,
   },
 
   contentContainerStyle: {

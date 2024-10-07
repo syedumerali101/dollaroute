@@ -1,5 +1,11 @@
 import React from 'react';
 
+const common = {
+  imageBackground: require('../assets/imageBackground.png'),
+  scan: require('../assets/scan.png'),
+  notification: require('../assets/notification.png'),
+};
+
 const welcomeScreen = {
   welcome1: require('../assets/welcome1.png'),
   welcome2: require('../assets/welcome2.png'),
@@ -7,17 +13,17 @@ const welcomeScreen = {
 };
 
 const signupScreen = {
-  google: require('../assets/google.png')
-}
+  google: require('../assets/google.png'),
+};
 
 const loginScreen = {
   eye: require('../assets/eye.png'),
-  leftArrow: require('../assets/leftArrow.png')
+  leftArrow: require('../assets/leftArrow.png'),
 };
 
 const emailSentScreen = {
   emailSent: require('../assets/emailSent.png'),
-}
+};
 
 const tabs = {
   home: require('../assets/home.png'),
@@ -25,12 +31,13 @@ const tabs = {
   deals: require('../assets/deals.png'),
   categories: require('../assets/categories.png'),
   profile: require('../assets/profile.png'),
-}
+};
 
 export default {
   welcomeScreen,
   signupScreen,
   loginScreen,
   emailSentScreen,
-  tabs
+  tabs,
+  common,
 };

@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {
   I18nManager,
+  SafeAreaView,
   ScrollView,
   Text,
   TextInput,
@@ -20,7 +21,7 @@ import {
 import moment from 'moment';
 import {verificationEmail} from '../../configs/Constants';
 
-const Verification = () => {
+const Verification = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const CELL_COUNT = 6;
   const [value, setValue] = useState();
@@ -92,12 +93,12 @@ const Verification = () => {
           }}
         />
 
-        {
-          countdown > 0 && <View style={styles.timerView}>
-          <Text style={styles.timerStyle}>{formattedTime}</Text>
-        </View>
-        }
-     
+        {countdown > 0 && (
+          <View style={styles.timerView}>
+            <Text style={styles.timerStyle}>{formattedTime}</Text>
+          </View>
+        )}
+
         <View style={styles.descriptionContainer}>
           <Text style={styles.sentVerificationTextStyle}>
             {en.verificationScreen.sentDesc}{' '}
@@ -116,6 +117,7 @@ const Verification = () => {
         </TouchableOpacity>
 
         <SubmitButton
+        onPress={() => navigation?.navigate('Login')}
           title={en.verificationScreen.submitBtnText}
           style={styles.submitButtonStyle}
         />
@@ -124,15 +126,15 @@ const Verification = () => {
   };
 
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ref={scrollViewRef}
-      style={styles.mainScrollViewStyle}
-      contentContainerStyle={styles.contentContainerStyle}>
-      <Header title={en.navTitles.verification} />
-      {renderInputFields()}
-    </ScrollView>
+      <ScrollView
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+        ref={scrollViewRef}
+        style={styles.mainScrollViewStyle}
+        contentContainerStyle={styles.contentContainerStyle}>
+        <Header title={en.navTitles.verification} />
+        {renderInputFields()}
+      </ScrollView>
   );
 };
 

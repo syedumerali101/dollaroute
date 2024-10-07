@@ -3,6 +3,9 @@ import {Colors, Metrics} from '../../theme';
 import {memo} from 'react';
 
 const styles = StyleSheet.create({
+  safeAreaView: {
+    flex: 1,
+  },
   mainInputContainer: {
     paddingVertical: Metrics.screenHeight * 0.02,
   },
@@ -32,9 +35,8 @@ const styles = StyleSheet.create({
     marginTop: Metrics.ratio(20),
     marginBottom: Metrics.ratio(20),
     width: Metrics.screenWidth * 0.4,
-    alignItems: 'center'
+    alignItems: 'center',
   },
-
 
   defaultCellContainer: {
     backgroundColor: Colors.lightMode.grey8,
@@ -58,46 +60,45 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 
-  timerView:{
+  timerView: {
     justifyContent: 'center',
   },
 
-  timerStyle:{
+  timerStyle: {
     color: Colors.lightMode.pink,
     fontSize: Metrics.ratio(12),
-    fontWeight: '600'
+    fontWeight: '600',
   },
 
-  didNotReceiveBtn:{
+  didNotReceiveBtn: {
     marginTop: Metrics.ratio(15),
-    marginLeft: Metrics.ratio(10)
+    marginLeft: Metrics.ratio(10),
   },
 
-  didNotReceiveText:{
+  didNotReceiveText: {
     color: Colors.lightMode.pink,
     textDecorationLine: 'underline',
     fontWeight: '500',
-    fontSize: Metrics.ratio(10)
+    fontSize: Metrics.ratio(10),
   },
 
-  descriptionContainer:{
+  descriptionContainer: {
     marginTop: Metrics.ratio(10),
     marginLeft: Metrics.ratio(10),
-    width: Metrics.screenWidth * 0.8
+    width: Metrics.screenWidth * 0.8,
   },
 
-  sentVerificationTextStyle:{
+  sentVerificationTextStyle: {
     color: Colors.lightMode.black3,
     fontSize: Metrics.ratio(10),
-    fontWeight: '500'
+    fontWeight: '500',
   },
 
-  emailText:{
+  emailText: {
     color: Colors.lightMode.pink,
     fontSize: Metrics.ratio(10),
-     fontWeight: '500'
-
-  }
+    fontWeight: '500',
+  },
 });
 
 export default styles;

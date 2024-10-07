@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     marginLeft: Metrics.ratio(8),
     width: Metrics.screenWidth * 0.7,
     fontSize: Metrics.ratio(10),
+    color: Colors.lightMode.black1
   },
 
   mainTextStyle: {

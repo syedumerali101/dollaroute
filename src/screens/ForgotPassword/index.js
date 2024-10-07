@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 import styles from './styles';
 import Header from '../../components/Header';
 import en from '../../translations/en.json';
@@ -44,15 +44,17 @@ const ForgotPassword = ({navigation}) => {
     );
   };
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ref={scrollViewRef}
-      style={styles.mainScrollViewStyle}
-      contentContainerStyle={styles.contentContainerStyle}>
-      <Header title={en.navTitles.forgotPassword} />
-      <View style={styles.mainRender}>{renderInputFields()}</View>
-    </ScrollView>
+    <SafeAreaView style={styles.safeAreaView}>
+      <ScrollView
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+        ref={scrollViewRef}
+        style={styles.mainScrollViewStyle}
+        contentContainerStyle={styles.contentContainerStyle}>
+        <Header title={en.navTitles.forgotPassword} />
+        <View style={styles.mainRender}>{renderInputFields()}</View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

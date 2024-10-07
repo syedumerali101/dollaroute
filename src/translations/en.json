@@ -65,5 +65,10 @@
     "newPassword": "New Password",
     "reTypePassword": "Retype new password",
     "submitBtnText": "continue"
+  },
+
+  "homeScreen":{
+    "hi": "Hi,",
+    "name": "Kashif Asif"
   }
 }

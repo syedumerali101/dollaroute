@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Text, View, ScrollView} from 'react-native';
+import {Text, View, ScrollView, SafeAreaView, StatusBar} from 'react-native';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';

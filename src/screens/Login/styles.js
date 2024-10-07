@@ -1,9 +1,13 @@
 import {StyleSheet} from 'react-native';
-import {Metrics} from '../../theme';
+import {Colors, Metrics} from '../../theme';
 
 const styles = StyleSheet.create({
+  safeAreaView:{
+    flex: 1
+  },
   mainScrollViewStyle: {
     flex: 1,
+    backgroundColor: Colors.white,
   },
 
   contentContainerStyle: {

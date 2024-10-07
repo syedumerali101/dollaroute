@@ -6,7 +6,7 @@ import en from '../../translations/en.json';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 
-const ResetPassword = () => {
+const ResetPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -49,6 +49,7 @@ const ResetPassword = () => {
         />
 
         <SubmitButton
+          onPress={() => navigation?.navigate('Login')}
           title={en.resetPassword.submitBtnText}
           style={styles.submitButtonStyle}
         />

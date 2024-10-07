@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Text, View, ScrollView, Alert} from 'react-native';
+import {Text, View, ScrollView, Alert, SafeAreaView} from 'react-native';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -104,15 +104,15 @@ const Signup = () => {
     );
   };
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ref={scrollViewRef}
-      style={styles.mainScrollViewStyle}
-      contentContainerStyle={styles.contentContainerStyle}>
-      <Header title={en.navTitles.signup} />
-      <View style={styles.mainRender}>{renderInputFields()}</View>
-    </ScrollView>
+      <ScrollView
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+        ref={scrollViewRef}
+        style={styles.mainScrollViewStyle}
+        contentContainerStyle={styles.contentContainerStyle}>
+        <Header title={en.navTitles.signup} />
+        <View style={styles.mainRender}>{renderInputFields()}</View>
+      </ScrollView>
   );
 };
 

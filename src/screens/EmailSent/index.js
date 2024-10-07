@@ -23,7 +23,7 @@ const EmailSent = ({navigation}) => {
       <SubmitButton
         title={en.emailSent.submitBtnText}
         style={styles.submitButtonStyle}
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('ResetPassword')}
       />
     </View>
   );
