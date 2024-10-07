@@ -8,8 +8,8 @@ function Navigation() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <AuthStack />
-        {/* <TabNavigator /> */}
+        {/* <AuthStack /> */}
+        <TabNavigator />
       </NavigationContainer>
     </SafeAreaProvider>
   );

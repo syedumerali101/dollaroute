@@ -3,12 +3,12 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  Text,
   TouchableOpacity,
   Image,
 } from 'react-native';
 import Images from '../../theme/Images';
 import {Colors, Metrics} from '../../theme';
+import Text from '../Text';
 
 const ImageHeader = ({title}) => {
   return (
@@ -17,7 +17,9 @@ const ImageHeader = ({title}) => {
       source={Images.common.imageBackground}>
       <View style={styles.mainHeaderRow}>
         <View style={styles.leftViewContainer}>
-          <Text style={styles.leftText}>{title}</Text>
+          <Text size="large" style={styles.leftText}>
+            {title}
+          </Text>
         </View>
 
         <View style={styles.rightViewContainer}>
@@ -63,7 +65,7 @@ const styles = StyleSheet.create({
 
   leftText: {
     color: Colors.white,
-    fontSize: Metrics.ratio(13),
+    // fontSize: Metrics.ratio(13),
     fontWeight: '600',
   },
 
@@ -81,8 +83,8 @@ const styles = StyleSheet.create({
 
   scanIconStyle: {
     resizeMode: 'contain',
-    height: Metrics.ratio(15),
-    width: Metrics.ratio(15),
+    height: Metrics.ratio(18),
+    width: Metrics.ratio(18),
   },
 
   notificationsBtn: {
@@ -92,8 +94,8 @@ const styles = StyleSheet.create({
 
   notificationIcon: {
     resizeMode: 'contain',
-    height: Metrics.ratio(15),
-    width: Metrics.ratio(15),
+    height: Metrics.ratio(18),
+    width: Metrics.ratio(18),
   },
 
   notificationCountView: {

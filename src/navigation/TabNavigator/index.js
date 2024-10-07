@@ -34,14 +34,12 @@ const TabNavigator = props => {
 };
 
 const MyTabBar = ({state, navigation}) => {
-  const [focusedItem, setFocusedItem] = useState(false);
   return (
     <View style={styles.container}>
       {state.routes.map((route, index) => {
         const isFocused = state.index === index;
         const onPress = () => {
           if (!isFocused) {
-            setFocusedItem(true);
             navigation.navigate(route.name);
           }
         };
