@@ -142,4 +142,31 @@ export const promoRewards = () => [
 
 ]
 
+export const categoriesTags = () => [
+  {
+    id: 1,
+    title: 'Electronics',
+  },
+
+  {
+    id: 2,
+    title: 'Clothing',
+  },
+
+  {
+    id: 3,
+    title: 'Groceries',
+  },
+  {
+    id: 4,
+    title: 'Travel',
+  },
+
+  {
+    id: 5,
+    title: 'Health & Beauty',
+  },
+
+]
+
 
