@@ -6,6 +6,7 @@ import AuthStack from '../AuthStack';
 import {Metrics} from '../../theme';
 import Images from '../../theme/Images';
 import HomeStack from '../HomeStack';
+import StoreStack from '../StoreStack';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -25,7 +26,7 @@ const TabNavigator = props => {
       tabBarPosition="bottom"
       tabBar={tabProps => <MyTabBar {...tabProps} {...props} />}>
       <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Stores" component={HomeStack} />
+      <Tab.Screen name="Stores" component={StoreStack} />
       <Tab.Screen name="Deals" component={HomeStack} />
       <Tab.Screen name="Categories" component={HomeStack} />
       <Tab.Screen name="Profile" component={HomeStack} />
