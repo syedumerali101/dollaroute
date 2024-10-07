@@ -6,15 +6,14 @@
  */
 
 import React from 'react';
-import {StyleSheet, View, SafeAreaView, StatusBar} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import {StyleSheet, View, SafeAreaView} from 'react-native';
 import Navigation from './src/navigation';
 
 function App() {
   return (
-    <SafeAreaView style={styles.mainContainer}>
-       <Navigation />
-    </SafeAreaView>
+    <View style={styles.mainContainer}>
+      <Navigation />
+    </View>
   );
 }
 

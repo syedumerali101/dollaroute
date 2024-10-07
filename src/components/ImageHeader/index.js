@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width: Metrics.screenWidth * 0.9,
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: Metrics.ratio(20),
+    marginTop: Metrics.ratio(50),
   },
 
   leftViewContainer: {

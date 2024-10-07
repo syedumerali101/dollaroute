@@ -20,6 +20,7 @@ import {
 } from 'react-native-confirmation-code-field';
 import moment from 'moment';
 import {verificationEmail} from '../../configs/Constants';
+import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 
 const Verification = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -117,7 +118,7 @@ const Verification = ({navigation}) => {
         </TouchableOpacity>
 
         <SubmitButton
-        onPress={() => navigation?.navigate('Login')}
+          onPress={() => navigation?.navigate('Login')}
           title={en.verificationScreen.submitBtnText}
           style={styles.submitButtonStyle}
         />
@@ -126,15 +127,10 @@ const Verification = ({navigation}) => {
   };
 
   return (
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
-        showsVerticalScrollIndicator={false}
-        ref={scrollViewRef}
-        style={styles.mainScrollViewStyle}
-        contentContainerStyle={styles.contentContainerStyle}>
-        <Header title={en.navTitles.verification} />
-        {renderInputFields()}
-      </ScrollView>
+    <SafeAreaWrapper>
+      <Header title={en.navTitles.verification} />
+      {renderInputFields()}
+    </SafeAreaWrapper>
   );
 };
 

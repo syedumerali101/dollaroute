@@ -7,11 +7,11 @@ import en from '../../translations/en.json';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import TextButton from '../../components/Buttons/TextButton';
 import DescTextButton from '../../components/Buttons/DescTextButton';
+import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const scrollViewRef = useRef();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
@@ -70,15 +70,10 @@ const Login = ({navigation}) => {
     );
   };
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ref={scrollViewRef}
-      style={styles.mainScrollViewStyle}
-      contentContainerStyle={styles.contentContainerStyle}>
+    <SafeAreaWrapper>
       <Header title={en.navTitles.login} />
       <View style={styles.mainRender}>{renderInputFields()}</View>
-    </ScrollView>
+    </SafeAreaWrapper>
   );
 };
 

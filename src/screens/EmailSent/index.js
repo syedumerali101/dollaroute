@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.white,
     alignItems: 'center',
+    justifyContent: 'center'
   },
 
   imageView: {
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
   textDetailsContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Metrics.ratio(15),
+    marginTop: Metrics.ratio(20),
   },
 
   headingStyle: {
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
 
   submitButtonStyle: {
     width: Metrics.screenWidth * 0.9,
-    marginTop: Metrics.screenHeight * 0.25,
+    marginTop: Metrics.screenHeight * 0.2,
   },
 });
 

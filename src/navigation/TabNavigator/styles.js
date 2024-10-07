@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderTopWidth: 1,
     borderColor: Colors.lightMode.white4,
-    paddingVertical: Metrics.ratio(10),
   },
 
   activeBtnStyle: {

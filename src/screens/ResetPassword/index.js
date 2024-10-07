@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import en from '../../translations/en.json';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
+import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 
 const ResetPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -57,15 +58,10 @@ const ResetPassword = ({navigation}) => {
     );
   };
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      showsVerticalScrollIndicator={false}
-      ref={scrollViewRef}
-      style={styles.mainScrollViewStyle}
-      contentContainerStyle={styles.contentContainerStyle}>
+    <SafeAreaWrapper>
       <Header title={en.navTitles.resetPassword} />
       <View style={styles.mainRender}>{renderInputFields()}</View>
-    </ScrollView>
+    </SafeAreaWrapper>
   );
 };
 

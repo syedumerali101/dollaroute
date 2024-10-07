@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     width: Metrics.screenWidth * 0.6,
-    height: Metrics.screenHeight * 0.4,
+    height: Metrics.screenHeight * 0.5,
     alignSelf: 'center',
   },
 
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     top: 0,
-    marginTop: Metrics.screenHeight * 0.4,
+    marginTop: Metrics.screenHeight * 0.48,
   },
 
   title: {

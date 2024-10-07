@@ -10,8 +10,9 @@ import DescTextButton from '../../components/Buttons/DescTextButton';
 import IconButton from '../../components/Buttons/IconButton';
 import Images from '../../theme/Images';
 import CheckboxButton from '../../components/Buttons/CheckboxButton';
+import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
@@ -85,6 +86,7 @@ const Signup = () => {
         <SubmitButton
           title={en.signupScreen.submitBtnText}
           style={styles.submitButtonStyle}
+          onPress={() => navigation.navigate('Login')}
         />
 
         <Text style={styles.seperatorText}>
@@ -99,20 +101,16 @@ const Signup = () => {
         <DescTextButton
           description={en.signupScreen.descriptionText}
           underlineText={en.signupScreen.underlineText}
+          onPress={() => navigation.navigate('Login')}
         />
       </View>
     );
   };
   return (
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
-        showsVerticalScrollIndicator={false}
-        ref={scrollViewRef}
-        style={styles.mainScrollViewStyle}
-        contentContainerStyle={styles.contentContainerStyle}>
-        <Header title={en.navTitles.signup} />
-        <View style={styles.mainRender}>{renderInputFields()}</View>
-      </ScrollView>
+    <SafeAreaWrapper>
+      <Header title={en.navTitles.signup} />
+      <View style={styles.mainRender}>{renderInputFields()}</View>
+    </SafeAreaWrapper>
   );
 };
 
