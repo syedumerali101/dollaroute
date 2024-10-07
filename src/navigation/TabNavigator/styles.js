@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: Metrics.screenWidth * 0.2,
-    marginBottom: Metrics.ratio(10),
+    marginBottom: Metrics.ratio(20),
   },
 
   tabBarIconStyle: focused => ({

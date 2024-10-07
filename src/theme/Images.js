@@ -34,7 +34,12 @@ const tabs = {
 };
 
 const dummy = {
-  bannerImage: require('../assets/bannerImage.png')
+  bannerImage: require('../assets/bannerImage.png'),
+  starbucks: require('../assets/starbucks.png'),
+  referBanner: require('../assets/referBanner.png'),
+  starbucksBanner: require('../assets/starbucksBanner.png'),
+
+
 }
 
 export default {

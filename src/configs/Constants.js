@@ -56,4 +56,90 @@ export const bannerData = () => [
   },
 ]
 
+export const featuredShops = () => [
+  {
+    id: 1,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+
+  {
+    id: 2,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+
+  {
+    id: 3,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+
+  {
+    id: 4,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+
+  {
+    id: 5,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+  {
+    id: 6,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+  {
+    id: 7,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+  {
+    id: 8,
+    title: 'Starbucks',
+    image: Images.dummy.starbucks
+  },
+]
+
+export const promoRewards = () => [
+  {
+    id: 1,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks'
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks'
+  },
+
+  {
+    id: 3,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks'
+  },
+
+  {
+    id: 4,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks'
+  },
+
+]
+
 
