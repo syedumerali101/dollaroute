@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Colors, Metrics} from '../../theme';
 import Images from '../../theme/Images';
 import { useNavigation } from '@react-navigation/native';
+import Text from '../Text';
 
 const Header = ({title}) => {
   const navigation = useNavigation();
@@ -16,7 +17,7 @@ const Header = ({title}) => {
       </View>
 
       <View style={styles.centerView}>
-        <Text style={styles.centerText}>{title}</Text>
+        <Text size='eighteen' style={styles.centerText}>{title}</Text>
       </View>
 
       {/* <View style={styles.rightView}>
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
 
   centerText: {
     color: Colors.lightMode.black1,
-    fontSize: Metrics.ratio(12),
+    // fontSize: Metrics.ratio(12),
     fontWeight: '600',
   },
 

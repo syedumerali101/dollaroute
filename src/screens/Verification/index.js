@@ -1,10 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {
   I18nManager,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -21,6 +17,7 @@ import {
 import moment from 'moment';
 import {verificationEmail} from '../../configs/Constants';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import Text from '../../components/Text';
 
 const Verification = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -56,7 +53,7 @@ const Verification = ({navigation}) => {
     const formattedTime = moment({minutes, seconds}).format('m:ss');
     return (
       <View style={styles.mainInputContainer}>
-        <Text style={styles.headingTextStyle}>
+        <Text size='xxxLarge' style={styles.headingTextStyle}>
           {en.verificationScreen.heading}
         </Text>
 
@@ -81,6 +78,7 @@ const Verification = ({navigation}) => {
               return (
                 <View style={styles.containerCellView}>
                   <Text
+                  size='xxLarge'
                     allowFontScaling={false}
                     key={index}
                     style={[symbol && styles.focusCell]}
@@ -96,14 +94,14 @@ const Verification = ({navigation}) => {
 
         {countdown > 0 && (
           <View style={styles.timerView}>
-            <Text style={styles.timerStyle}>{formattedTime}</Text>
+            <Text size='eighteen' style={styles.timerStyle}>{formattedTime}</Text>
           </View>
         )}
 
         <View style={styles.descriptionContainer}>
-          <Text style={styles.sentVerificationTextStyle}>
+          <Text size='sixteen' style={styles.sentVerificationTextStyle}>
             {en.verificationScreen.sentDesc}{' '}
-            <Text style={styles.emailText}>{verificationEmail}.</Text>{' '}
+            <Text size='sixteen' style={styles.emailText}>{verificationEmail}.</Text>{' '}
             {en.verificationScreen.checkInbox}
           </Text>
         </View>
@@ -112,7 +110,7 @@ const Verification = ({navigation}) => {
           onPress={handleResetCountdown}
           style={styles.didNotReceiveBtn}
           activeOpacity={1}>
-          <Text style={styles.didNotReceiveText}>
+          <Text size='sixteen' style={styles.didNotReceiveText}>
             {en.verificationScreen.didNotReceive}
           </Text>
         </TouchableOpacity>

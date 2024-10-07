@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet} from 'react-native';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import {Colors, Metrics} from '../../theme';
 import Images from '../../theme/Images';
 import en from '../../translations/en.json';
+import Text from '../../components/Text';
 
 const EmailSent = ({navigation}) => {
   return (
@@ -16,8 +17,8 @@ const EmailSent = ({navigation}) => {
       </View>
 
       <View style={styles.textDetailsContainer}>
-        <Text style={styles.headingStyle}>{en.emailSent.heading}</Text>
-        <Text style={styles.descriptionStyle}>{en.emailSent.description}</Text>
+        <Text size='large' style={styles.headingStyle}>{en.emailSent.heading}</Text>
+        <Text size='sixteen' style={styles.descriptionStyle}>{en.emailSent.description}</Text>
       </View>
 
       <SubmitButton
@@ -57,14 +58,14 @@ const styles = StyleSheet.create({
 
   headingStyle: {
     color: Colors.lightMode.black2,
-    fontSize: Metrics.ratio(16),
+    // fontSize: Metrics.ratio(16),
     fontWeight: '600',
     textAlign: 'center',
   },
 
   descriptionStyle: {
     color: Colors.lightMode.black3,
-    fontSize: Metrics.ratio(11),
+    // fontSize: Metrics.ratio(11),
     fontWeight: '500',
     textAlign: 'center',
     width: Metrics.screenWidth * 0.7,

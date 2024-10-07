@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
+import Text from '../../Text';
 
 const IconButton = ({title, icon, onPress}) => {
   return (
@@ -10,7 +11,7 @@ const IconButton = ({title, icon, onPress}) => {
       </View>
 
       <View style={styles.titleView}>
-        <Text style={styles.titleText}>{title}</Text>
+        <Text size='eighteen' style={styles.titleText}>{title}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
 
   titleText: {
     color: Colors.lightMode.black1,
-    fontSize: Metrics.ratio(12),
+    // fontSize: Metrics.ratio(12),
     textTransform: 'capitalize',
   },
 });

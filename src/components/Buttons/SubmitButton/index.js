@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
+import Text from '../../Text';
 
 const SubmitButton = ({title, disabled, style, type, textStyle, onPress}) => {
   return (
@@ -9,7 +10,9 @@ const SubmitButton = ({title, disabled, style, type, textStyle, onPress}) => {
       disabled={disabled ? disabled : false}
       style={[styles.touchableButtonStyle, style]}
       onPress={onPress}>
-      <Text style={[styles.titleTextStyle, textStyle]}>{title}</Text>
+      <Text size="eighteen" style={[styles.titleTextStyle, textStyle]}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -27,9 +30,9 @@ const styles = StyleSheet.create({
 
   titleTextStyle: {
     color: Colors.lightMode.white4,
-    fontSize: Metrics.ratio(12),
+    // fontSize: Metrics.ratio(12),
     fontWeight: '600',
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
   },
 });
 

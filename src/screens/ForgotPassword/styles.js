@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   headingTextStyle: {
     color: Colors.lightMode.black2,
     fontWeight: '600',
-    fontSize: Metrics.ratio(16),
-    width: Metrics.screenWidth * 0.7,
+    // fontSize: Metrics.ratio(16),
+    width: Metrics.screenWidth * 0.8,
   },
 
   mainInputContainer: {

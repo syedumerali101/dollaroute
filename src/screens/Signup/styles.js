@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
   seperatorText:{
     color: Colors.lightMode.grey5,
-    fontSize: Metrics.ratio(11),
+    // fontSize: Metrics.ratio(11),
     fontWeight: '700',
     marginTop: Metrics.ratio(10),
   }

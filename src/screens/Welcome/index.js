@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   View,
-  Text,
+  // Text,
   Animated,
   Dimensions,
   ImageBackground,
@@ -13,6 +13,7 @@ import Images from '../../theme/Images';
 import en from '../../translations/en.json';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import {onboarding_screens} from '../../configs/Constants';
+import Text from '../../components/Text';
 
 const Welcome = ({navigation}) => {
   const {width} = Dimensions.get('window');
@@ -118,8 +119,8 @@ const Welcome = ({navigation}) => {
                 resizeMode="contain"
                 style={styles.imageBackgroundContainer}>
                 <View style={styles.mainImageTextContainer}>
-                  <Text style={styles.title}>{item.title}</Text>
-                  <Text style={styles.description}>{item.description}</Text>
+                  <Text size='xxLarge' style={styles.title}>{item.title}</Text>
+                  <Text size='sixteen' style={styles.description}>{item.description}</Text>
                 </View>
               </ImageBackground>
             </View>
@@ -219,7 +220,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontWeight: '700',
-    fontSize: Metrics.ratio(22),
+    // fontSize: Metrics.ratio(22),
     color: Colors.lightMode.black1,
     textAlign: 'center',
     width: Metrics.screenWidth * 0.7,

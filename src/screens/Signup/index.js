@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {Text, View, ScrollView, Alert, SafeAreaView} from 'react-native';
+import {View, ScrollView, Alert, SafeAreaView} from 'react-native';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -11,6 +11,7 @@ import IconButton from '../../components/Buttons/IconButton';
 import Images from '../../theme/Images';
 import CheckboxButton from '../../components/Buttons/CheckboxButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import Text from '../../components/Text';
 
 const Signup = ({navigation}) => {
   const [name, setName] = useState(null);
@@ -89,7 +90,7 @@ const Signup = ({navigation}) => {
           onPress={() => navigation.navigate('Login')}
         />
 
-        <Text style={styles.seperatorText}>
+        <Text size='fourteen' style={styles.seperatorText}>
           {en.signupScreen.seperatorText}
         </Text>
 

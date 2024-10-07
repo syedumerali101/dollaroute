@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
+import Text from '../../Text';
 
 const CheckboxButton = ({onPress, text, mainText, checked, onSubBtnPress}) => {
   return (
@@ -19,9 +20,9 @@ const CheckboxButton = ({onPress, text, mainText, checked, onSubBtnPress}) => {
       />
 
       <TouchableOpacity onPress={onSubBtnPress} style={styles.mainDescriptionBtn} activeOpacity={1}>
-        <Text style={styles.textStyle}>
+        <Text size='fourteen' style={styles.textStyle}>
           {text}
-          <Text style={styles.mainTextStyle}> {mainText}</Text>
+          <Text size='fourteen' style={styles.mainTextStyle}> {mainText}</Text>
         </Text>
       </TouchableOpacity>
     </View>
@@ -48,13 +49,13 @@ const styles = StyleSheet.create({
   textStyle: {
     marginLeft: Metrics.ratio(8),
     width: Metrics.screenWidth * 0.7,
-    fontSize: Metrics.ratio(10),
+    // fontSize: Metrics.ratio(10),
     color: Colors.lightMode.black1
   },
 
   mainTextStyle: {
     color: Colors.lightMode.pink,
-    fontSize: Metrics.ratio(10),
+    // fontSize: Metrics.ratio(10),
   },
 
   mainDescriptionBtn: {

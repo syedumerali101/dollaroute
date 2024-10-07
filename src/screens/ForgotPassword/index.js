@@ -1,11 +1,12 @@
 import React, {useRef, useState} from 'react';
-import {SafeAreaView, ScrollView, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 import styles from './styles';
 import Header from '../../components/Header';
 import en from '../../translations/en.json';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import Text from '../../components/Text';
 
 const ForgotPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -24,7 +25,7 @@ const ForgotPassword = ({navigation}) => {
   const renderInputFields = () => {
     return (
       <View style={styles.mainInputContainer}>
-        <Text style={styles.headingTextStyle}>{en.forgotPassword.heading}</Text>
+        <Text size='large' style={styles.headingTextStyle}>{en.forgotPassword.heading}</Text>
 
         <AuthTextInput
           value={email}

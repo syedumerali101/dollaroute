@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
+import Text from '../../Text';
 
 const DescTextButton = ({
   description,
@@ -12,7 +13,9 @@ const DescTextButton = ({
   return (
     <View style={styles.mainViewContainer}>
       <View style={styles.descriptionViewContainer}>
-        <Text style={styles.description}>{description}</Text>
+        <Text size="sixteen" style={styles.description}>
+          {description}
+        </Text>
       </View>
 
       <TouchableOpacity
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
     color: Colors.lightMode.pink,
     fontSize: Metrics.ratio(10),
     textDecorationLine: 'underline',
-    fontWeight: '500'
+    fontWeight: '500',
   },
 });
 

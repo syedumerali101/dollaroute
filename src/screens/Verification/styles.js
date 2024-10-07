@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   headingTextStyle: {
     color: Colors.lightMode.black2,
     fontWeight: '500',
-    fontSize: Metrics.ratio(24),
-    width: Metrics.screenWidth * 0.6,
+    // fontSize: Metrics.ratio(24),
+    width: Metrics.screenWidth * 0.8,
   },
 
   mainScrollViewStyle: {
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 
   focusCell: {
     color: Colors.lightMode.black4,
-    fontSize: Metrics.ratio(20),
+    // fontSize: Metrics.ratio(20),
     fontWeight: '700',
     alignSelf: 'center',
   },
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
 
   timerStyle: {
     color: Colors.lightMode.pink,
-    fontSize: Metrics.ratio(12),
+    // fontSize: Metrics.ratio(12),
     fontWeight: '600',
   },
 
@@ -90,13 +90,13 @@ const styles = StyleSheet.create({
 
   sentVerificationTextStyle: {
     color: Colors.lightMode.black3,
-    fontSize: Metrics.ratio(10),
+    // fontSize: Metrics.ratio(10),
     fontWeight: '500',
   },
 
   emailText: {
     color: Colors.lightMode.pink,
-    fontSize: Metrics.ratio(10),
+    // fontSize: Metrics.ratio(10),
     fontWeight: '500',
   },
 });

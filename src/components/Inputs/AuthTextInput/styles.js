@@ -26,6 +26,7 @@ export default style = StyleSheet.create({
     marginLeft: Metrics.ratio(10),
     color: Colors.lightMode.black1,
     width: Metrics.screenWidth * 0.8,
+    fontSize: Metrics.ratio(14),
   },
 
   emailStyle: {

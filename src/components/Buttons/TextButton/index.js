@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
+import Text from '../../Text';
 
 const TextButton = ({text, onPress, btnStyle, textStyle}) => {
   return (
@@ -8,7 +9,9 @@ const TextButton = ({text, onPress, btnStyle, textStyle}) => {
       style={[styles.btnStyle, btnStyle]}
       activeOpacity={1}
       onPress={onPress}>
-      <Text style={[styles.textStyle, textStyle]}>{text}</Text>
+      <Text size="eighteen" style={[styles.textStyle, textStyle]}>
+        {text}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: Colors.lightMode.pink,
-    fontSize: Metrics.ratio(12),
+    // fontSize: Metrics.ratio(12),
     fontWeight: '600',
   },
 });
