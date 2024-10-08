@@ -5,7 +5,14 @@ const common = {
   scan: require('../assets/scan.png'),
   notification: require('../assets/notification.png'),
   coin: require('../assets/points.png'),
-  pending: require('../assets/tier.png')
+  pending: require('../assets/tier.png'),
+  map: require('../assets/map.png'),
+  mcdonald: require('../assets/mcdonald.png'),
+  hermes: require('../assets/hermes.png'),
+  rating: require('../assets/rating.png'),
+  heart: require('../assets/heart.png'),
+  heartFill: require('../assets/heartFill.png'),
+  share: require('../assets/share.png'),
 };
 
 const welcomeScreen = {
@@ -37,12 +44,16 @@ const tabs = {
 
 const dummy = {
   bannerImage: require('../assets/bannerImage.png'),
+<<<<<<< Updated upstream
   starbucks: require('../assets/starbucks.png'),
   referBanner: require('../assets/referBanner.png'),
   starbucksBanner: require('../assets/starbucksBanner.png'),
 
 
 }
+=======
+};
+>>>>>>> Stashed changes
 
 export default {
   welcomeScreen,
@@ -51,5 +62,5 @@ export default {
   emailSentScreen,
   tabs,
   common,
-  dummy
+  dummy,
 };
