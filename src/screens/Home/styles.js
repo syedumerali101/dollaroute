@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     height: Metrics.screenHeight,
     borderTopLeftRadius: Metrics.ratio(20),
     borderTopRightRadius: Metrics.ratio(20),
-    bottom: Metrics.ratio(25)
   },
 
   rowBtnStyle: {
@@ -143,12 +142,27 @@ const styles = StyleSheet.create({
 
   promoContentContainerStyle: {
     alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: Metrics.ratio(20),
+    paddingHorizontal: Metrics.ratio(10)
+    
   },
 
   promoCardContainer: {
     marginLeft: Metrics.ratio(10),
+    marginBottom: Metrics.ratio(10),
   },
+
+  whiteSeparatorHeader:{
+    backgroundColor: Colors.lightMode.white,
+    width: Metrics.screenWidth,
+    height: Metrics.screenHeight * 0.05,
+    borderTopLeftRadius: Metrics.ratio(25),
+    borderTopRightRadius: Metrics.ratio(25),
+    position: 'absolute',
+    bottom: 0,
+    top: Metrics.screenHeight * 0.22
+  }
 });
 
 export default styles;
