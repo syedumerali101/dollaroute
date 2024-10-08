@@ -164,7 +164,6 @@ const Home = () => {
         ref={scrollViewRef}
         style={styles.mainRenderContainer}>
         <RowButton
-          style={styles.rowBtnStyle}
           title="Recommended Offers"
           buttonTitle={'See all'}
         />
@@ -195,6 +194,7 @@ const Home = () => {
 
       <View style={styles.mainScrollViewStyle}>
         <ImageHeader title={en.homeScreen.hi + ' ' + en.homeScreen.name} />
+        <View style={styles.whiteSeparatorHeader} />
         {mainRender()}
       </View>
     </>
