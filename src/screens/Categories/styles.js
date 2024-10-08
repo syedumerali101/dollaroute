@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../theme';
 
 const styles = StyleSheet.create({
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     height: Metrics.screenHeight,
     borderTopLeftRadius: Metrics.ratio(10),
     borderTopRightRadius: Metrics.ratio(10),
-    borderBottomColor: 'red',
+    paddingTop: StatusBar.currentHeight || 50,
+    
   },
 
   rowBtnStyle: {
@@ -161,6 +162,10 @@ const styles = StyleSheet.create({
     marginLeft: Metrics.ratio(10),
     marginBottom: Metrics.ratio(10),
   },
+
+  contentContainerStyle: {
+    paddingBottom: Metrics.ratio(20),
+  }
 });
 
 export default styles;

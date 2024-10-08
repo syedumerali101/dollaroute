@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   ImageBackground,
+  StatusBar,
 } from 'react-native';
 import styles from './styles';
 import ImageHeader from '../../components/ImageHeader';
@@ -145,7 +146,8 @@ const Categories = () => {
       keyboardShouldPersistTaps="handled"
       showsVerticalScrollIndicator={false}
       ref={scrollViewRef}
-      style={styles.mainRenderContainer}>
+      contentContainerStyle={styles.contentContainerStyle}
+      style={[styles.mainRenderContainer]}>
       {renderSearchBox()}
       {renderFeaturedShops()}
       <RowButton
