@@ -161,6 +161,7 @@ const Categories = () => {
         style={styles.rowBtnStyle}
         title="Electronics"
         buttonTitle={'See all'}
+        deals={'32 Deals'}
       />
       {renderPromoRewards(electronicsData())}
 
@@ -168,6 +169,7 @@ const Categories = () => {
         style={styles.catgoriesRowStyle}
         title="Clothing"
         buttonTitle={'See all'}
+        deals={'32 Deals'}
       />
       {renderPromoRewards(clothingData())}
 
@@ -175,6 +177,7 @@ const Categories = () => {
         style={styles.catgoriesRowStyle}
         title="Groceries"
         buttonTitle={'See all'}
+        deals={'32 Deals'}
       />
       {renderPromoRewards(groceriesData())}
 
@@ -182,6 +185,7 @@ const Categories = () => {
         style={styles.catgoriesRowStyle}
         title="Travel"
         buttonTitle={'See all'}
+        deals={'32 Deals'}
       />
       {renderPromoRewards(travelData())}
 
@@ -189,6 +193,7 @@ const Categories = () => {
         style={styles.catgoriesRowStyle}
         title="Health & Beauty"
         buttonTitle={'See all'}
+        deals={'32 Deals'}
       />
       {renderPromoRewards(skinData())}
     </ScrollView>
