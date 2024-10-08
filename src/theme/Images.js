@@ -56,6 +56,19 @@ const dummy = {
 
   referBanner: require('../assets/referBanner.png'),
   starbucksBanner: require('../assets/starbucksBanner.png'),
+
+  appleBanner: require('../assets/appleBanner.png'),
+  apple: require('../assets/apple.png'),
+  groceriesBanner: require('../assets/groceriesBanner.png'),
+  groceries: require('../assets/groceries.png'),
+  clothingBanner: require('../assets/clothingBanner.png'),
+  clothing: require('../assets/clothing.png'),
+  skin: require('../assets/skin.png'),
+  skinBanner: require('../assets/skinBanner.png'),
+  travelBanner: require('../assets/travelBanner.png'),
+  airbn: require('../assets/airbn.png'),
+  
+
 };
 
 export default {

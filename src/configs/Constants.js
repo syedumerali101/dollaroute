@@ -121,6 +121,106 @@ export const promoRewards = () => [
   },
 ];
 
+export const electronicsData = () => [
+  {
+    id: 1,
+    image: Images.dummy.appleBanner,
+    icon: Images.dummy.apple,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.appleBanner,
+    icon: Images.dummy.apple,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+]
+
+export const clothingData = () => [
+  {
+    id: 1,
+    image: Images.dummy.clothingBanner,
+    icon: Images.dummy.clothing,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.clothingBanner,
+    icon: Images.dummy.clothing,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+]
+
+export const groceriesData = () => [
+  {
+    id: 1,
+    image: Images.dummy.groceriesBanner,
+    icon: Images.dummy.groceries,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.groceriesBanner,
+    icon: Images.dummy.groceries,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+]
+
+export const travelData = () => [
+  {
+    id: 1,
+    image: Images.dummy.travelBanner,
+    icon: Images.dummy.airbn,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.travelBanner,
+    icon: Images.dummy.airbn,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+]
+
+export const skinData = () => [
+  {
+    id: 1,
+    image: Images.dummy.skinBanner,
+    icon: Images.dummy.skin,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.skinBanner,
+    icon: Images.dummy.skin,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+]
+
 export const categoriesTags = () => [
   {
     id: 1,

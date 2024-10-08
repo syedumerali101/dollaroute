@@ -15,8 +15,13 @@ import Carousel from 'react-native-snap-carousel';
 import {
   bannerData,
   categoriesTags,
+  clothingData,
+  electronicsData,
   featuredShops,
+  groceriesData,
   promoRewards,
+  skinData,
+  travelData,
 } from '../../configs/Constants';
 import {Colors, Metrics} from '../../theme';
 import Text from '../../components/Text';
@@ -122,10 +127,10 @@ const Categories = () => {
     );
   };
 
-  const renderPromoRewards = () => {
+  const renderPromoRewards = data => {
     return (
       <FlatList
-        data={promoRewards()}
+        data={data}
         horizontal={true}
         style={styles.promoListStyle}
         contentContainerStyle={styles.promoContentContainerStyle}
@@ -155,28 +160,35 @@ const Categories = () => {
         title="Electronics"
         buttonTitle={'See all'}
       />
-      {renderPromoRewards()}
+      {renderPromoRewards(electronicsData())}
 
       <RowButton
         style={styles.catgoriesRowStyle}
-        title="Electronics"
+        title="Clothing"
         buttonTitle={'See all'}
       />
-      {renderPromoRewards()}
+      {renderPromoRewards(clothingData())}
 
       <RowButton
         style={styles.catgoriesRowStyle}
-        title="Electronics"
+        title="Groceries"
         buttonTitle={'See all'}
       />
-      {renderPromoRewards()}
+      {renderPromoRewards(groceriesData())}
 
       <RowButton
         style={styles.catgoriesRowStyle}
-        title="Electronics"
+        title="Travel"
         buttonTitle={'See all'}
       />
-      {renderPromoRewards()}
+      {renderPromoRewards(travelData())}
+
+      <RowButton
+        style={styles.catgoriesRowStyle}
+        title="Health & Beauty"
+        buttonTitle={'See all'}
+      />
+      {renderPromoRewards(skinData())}
     </ScrollView>
   );
 };

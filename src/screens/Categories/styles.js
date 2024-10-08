@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   featuredStyle: {
     justifyContent: 'center',
     alignItems: 'center',
-    margin: Metrics.ratio(10),
+    margin: Metrics.ratio(5),
     backgroundColor: Colors.white,
     padding: Metrics.ratio(5),
     paddingHorizontal: Metrics.ratio(10),
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
 
   featuredContentContainerStyle: {
     alignItems: 'center',
+    marginTop: Metrics.ratio(10)
   },
 
   referBannerContainer: {
