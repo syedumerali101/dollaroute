@@ -73,5 +73,9 @@
     "referAFriend": "Refer a Friend and",
     "earnAmount": "Earn $10!",
     "referNow": "Refer Now",
+  },
+
+  "categoriesScreen": {
+    "search": "Search..."
   }
 }

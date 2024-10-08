@@ -15,6 +15,8 @@ const common = {
   share: require('../assets/share.png'),
   filter: require('../assets/filter.png'),
   location: require('../assets/location.png'),
+  search: require('../assets/search.png'),
+  filters: require('../assets/filters.png'),
 };
 
 const welcomeScreen = {

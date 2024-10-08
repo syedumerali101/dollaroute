@@ -151,12 +151,14 @@ const styles = StyleSheet.create({
 
   promoContentContainerStyle: {
     alignItems: 'center',
-    margin: Metrics.ratio(2),
+    justifyContent: 'center',
     marginBottom: Metrics.ratio(20),
+    paddingHorizontal: Metrics.ratio(10)
   },
 
   promoCardContainer: {
     marginLeft: Metrics.ratio(10),
+    marginBottom: Metrics.ratio(10),
   },
 });
 

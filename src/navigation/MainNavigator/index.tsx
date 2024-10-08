@@ -6,20 +6,21 @@ const Stack = createStackNavigator();
 
 const MainNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator
+      initialRouteName="AuthStack"
+      screenOptions={{headerShown: false}}>
       <>
+        <Stack.Screen
+          name="AuthStack"
+          component={AuthStack}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="TabNavigator"
           component={TabNavigator}
           options={{headerShown: false}}
         />
       </>
-      <Stack.Screen
-        name="AuthStack"
-        component={AuthStack}
-        options={{headerShown: false}}
-      />
-
     </Stack.Navigator>
   );
 };

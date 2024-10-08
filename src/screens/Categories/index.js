@@ -24,11 +24,16 @@ import RowButton from '../../components/Buttons/RowButton';
 import Images from '../../theme/Images';
 import CategoryCard from '../../components/Cards/CategoryCard';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import SearchTextInput from '../../components/Inputs/SearchTextInput';
 
 const Categories = () => {
   const windowWidth = Dimensions.get('window').width;
   const scrollViewRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
+
+  const renderSearchBox = () => {
+    return <SearchTextInput placeHolder={en.categoriesScreen.search} />;
+  };
 
   const renderDots = () => {
     return (
@@ -130,48 +135,50 @@ const Categories = () => {
     );
   };
 
-  const mainRender = () => {
-    return (
-      <SafeAreaWrapper>
-        {renderFeaturedShops()}
-        <RowButton
-          style={styles.rowBtnStyle}
-          title="Recommended Offers"
-          buttonTitle={'See all'}
-        />
+  return (
+    <ScrollView
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
+      ref={scrollViewRef}
+      style={styles.mainRenderContainer}>
+      {renderSearchBox()}
+      {renderFeaturedShops()}
+      <RowButton
+        style={styles.rowBtnStyle}
+        title="Recommended Offers"
+        buttonTitle={'See all'}
+      />
 
-        {renderSlideBanner()}
-        <RowButton
-          style={styles.rowBtnStyle}
-          title="Electronics"
-          buttonTitle={'See all'}
-        />
-        {renderPromoRewards()}
+      {renderSlideBanner()}
+      <RowButton
+        style={styles.rowBtnStyle}
+        title="Electronics"
+        buttonTitle={'See all'}
+      />
+      {renderPromoRewards()}
 
-        <RowButton
-          style={styles.catgoriesRowStyle}
-          title="Electronics"
-          buttonTitle={'See all'}
-        />
-        {renderPromoRewards()}
+      <RowButton
+        style={styles.catgoriesRowStyle}
+        title="Electronics"
+        buttonTitle={'See all'}
+      />
+      {renderPromoRewards()}
 
-        <RowButton
-          style={styles.catgoriesRowStyle}
-          title="Electronics"
-          buttonTitle={'See all'}
-        />
-        {renderPromoRewards()}
+      <RowButton
+        style={styles.catgoriesRowStyle}
+        title="Electronics"
+        buttonTitle={'See all'}
+      />
+      {renderPromoRewards()}
 
-        <RowButton
-          style={styles.catgoriesRowStyle}
-          title="Electronics"
-          buttonTitle={'See all'}
-        />
-        {renderPromoRewards()}
-      </SafeAreaWrapper>
-    );
-  };
-  return <View style={styles.mainScrollViewStyle}>{mainRender()}</View>;
+      <RowButton
+        style={styles.catgoriesRowStyle}
+        title="Electronics"
+        buttonTitle={'See all'}
+      />
+      {renderPromoRewards()}
+    </ScrollView>
+  );
 };
 
 export default Categories;
