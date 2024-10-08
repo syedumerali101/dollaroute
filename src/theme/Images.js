@@ -44,16 +44,10 @@ const tabs = {
 
 const dummy = {
   bannerImage: require('../assets/bannerImage.png'),
-<<<<<<< Updated upstream
   starbucks: require('../assets/starbucks.png'),
   referBanner: require('../assets/referBanner.png'),
   starbucksBanner: require('../assets/starbucksBanner.png'),
-
-
-}
-=======
 };
->>>>>>> Stashed changes
 
 export default {
   welcomeScreen,
