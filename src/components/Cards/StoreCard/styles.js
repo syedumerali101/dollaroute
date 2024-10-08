@@ -1,6 +1,6 @@
-import {Colors, Metrics} from '../../../theme';
+import {StyleSheet} from 'react-native';
 
-const {StyleSheet} = require('react-native');
+import {Colors, Metrics} from '../../../theme';
 
 const styles = StyleSheet.create({
   container: {

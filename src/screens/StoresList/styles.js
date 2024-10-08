@@ -1,6 +1,6 @@
 import {Colors, Metrics} from '../../theme';
 
-const {StyleSheet} = require('react-native');
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   map: {

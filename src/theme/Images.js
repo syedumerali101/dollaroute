@@ -17,6 +17,9 @@ const common = {
   location: require('../assets/location.png'),
   search: require('../assets/search.png'),
   filters: require('../assets/filters.png'),
+  dealCard: require('../assets/dealCard.png'),
+  nike: require('../assets/nike.png'),
+  calendar: require('../assets/calendar.png'),
 };
 
 const welcomeScreen = {
