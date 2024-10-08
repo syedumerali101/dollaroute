@@ -29,7 +29,7 @@ const TabNavigator = props => {
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Stores" component={StoreStack} />
       <Tab.Screen name="Deals" component={HomeStack} />
-      <Tab.Screen name="Categories" component={CategoriesStack} />
+      <Tab.Screen name="Categories" component={HomeStack} />
       <Tab.Screen name="Profile" component={HomeStack} />
     </Tab.Navigator>
   );
