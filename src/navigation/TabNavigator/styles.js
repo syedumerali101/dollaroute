@@ -5,9 +5,9 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     flexDirection: 'row',
-    borderTopWidth: 1,
+    borderTopWidth: 2,
     borderColor: Colors.lightMode.white4,
-    paddingVertical: Metrics.ratio(15),
+    backgroundColor: Colors.lightMode.white,
   },
 
   activeBtnStyle: {
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: Metrics.screenWidth * 0.2,
-    marginBottom: Metrics.ratio(20),
+    marginVertical: Metrics.ratio(15),
   },
 
   tabBarIconStyle: focused => ({
