@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../theme';
 
 const styles = StyleSheet.create({
-  safeAreaView:{
-    flex: 1
+  safeAreaView: {
+    flex: 1,
   },
   mainScrollViewStyle: {
     flex: 1,
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   inputFieldContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: Metrics.screenHeight * 0.05
+    paddingVertical: Metrics.screenHeight * 0.05,
   },
 
   submitButtonStyle: {

@@ -6,6 +6,7 @@ import en from '../../translations/en.json';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import { navigate } from '../../utils/navigation';
 
 const ResetPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -26,6 +27,7 @@ const ResetPassword = ({navigation}) => {
 
   const onSubmit = () => {
     console.log(email, password, 'email and password');
+    navigate('Login')
   };
 
   const renderInputFields = () => {
@@ -50,7 +52,7 @@ const ResetPassword = ({navigation}) => {
         />
 
         <SubmitButton
-          onPress={() => navigation?.navigate('Login')}
+          onPress={onSubmit}
           title={en.resetPassword.submitBtnText}
           style={styles.submitButtonStyle}
         />

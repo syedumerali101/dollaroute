@@ -33,7 +33,7 @@ const Header = ({title}) => {
 const styles = StyleSheet.create({
   headerContainer: {
     width: Metrics.screenWidth,
-    height: Metrics.ratio(40),
+    height: Metrics.ratio(56),
     flexDirection: 'row',
   },
 
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   centerText: {
     color: Colors.lightMode.black1,
     // fontSize: Metrics.ratio(12),
-    fontWeight: '600',
+    fontWeight: '800',
   },
 
   rightView: {

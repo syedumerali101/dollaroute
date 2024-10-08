@@ -11,7 +11,9 @@ import ResetPassword from '../screens/ResetPassword';
 function AuthStack() {
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="Welcome">
+    <Stack.Navigator
+      initialRouteName="Welcome"
+      screenOptions={{headerShown: false}}>
       <Stack.Screen
         options={{headerShown: false}}
         name="Welcome"

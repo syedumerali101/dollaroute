@@ -10,7 +10,11 @@ import Images from '../../theme/Images';
 import {Colors, Metrics} from '../../theme';
 import Text from '../Text';
 
-const ImageHeader = ({title}) => {
+const ImageHeader = ({
+  title,
+  totalCashback = '$50',
+  pendingCashback = '$50',
+}) => {
   return (
     <ImageBackground
       style={styles.mainHeaderStyle}
@@ -20,6 +24,8 @@ const ImageHeader = ({title}) => {
           <Text size="large" style={styles.leftText}>
             {title}
           </Text>
+
+          {/* Add Cashback and Pending Section */}
         </View>
 
         <View style={styles.rightViewContainer}>
@@ -37,6 +43,21 @@ const ImageHeader = ({title}) => {
               <Text style={styles.countText}>1</Text>
             </View>
           </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.cashbackContainer}>
+        <View style={styles.cashbackSection}>
+          <Image source={Images.common.coin} style={styles.cashbackIcon} />
+          <Text style={styles.cashbackText}>Total Cashback</Text>
+          <Text style={styles.cashbackAmount}>{totalCashback}</Text>
+        </View>
+
+        <View style={styles.separator} />
+
+        <View style={styles.cashbackSection}>
+          <Image source={Images.common.pending} style={styles.pendingIcon} />
+          <Text style={styles.cashbackText}>Pending</Text>
+          <Text style={styles.cashbackAmount}>{pendingCashback}</Text>
         </View>
       </View>
     </ImageBackground>
@@ -65,8 +86,59 @@ const styles = StyleSheet.create({
 
   leftText: {
     color: Colors.white,
-    // fontSize: Metrics.ratio(13),
     fontWeight: '600',
+  },
+
+  cashbackContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop: Metrics.ratio(10),
+    width: Metrics.screenWidth * 1,
+    alignSelf: 'center',
+    bottom: 0,
+    height: Metrics.ratio(58),
+    backgroundColor: 'rgba(255,222,226,0.12)',
+    alignItems: 'center',
+    borderTopRightRadius: Metrics.ratio(16),
+    borderTopLeftRadius: Metrics.ratio(16),
+  },
+
+  cashbackSection: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    width:'40%',
+  },
+
+  cashbackIcon: {
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
+    marginRight: Metrics.ratio(5),
+    resizeMode: 'contain',
+  },
+
+  cashbackText: {
+    color: Colors.white,
+    fontWeight: '500',
+    marginRight: Metrics.ratio(5),
+  },
+
+  cashbackAmount: {
+    color: Colors.white,
+    fontWeight: '600',
+  },
+
+  separator: {
+    width: 1,
+    height: Metrics.ratio(30),
+    backgroundColor: Colors.white,
+    marginHorizontal: Metrics.ratio(10),
+  },
+
+  pendingIcon: {
+    height: Metrics.ratio(15),
+    width: Metrics.ratio(15),
+    marginRight: Metrics.ratio(5),
+    resizeMode: 'contain',
   },
 
   rightViewContainer: {

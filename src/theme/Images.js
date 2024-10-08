@@ -4,6 +4,8 @@ const common = {
   imageBackground: require('../assets/imageBackground.png'),
   scan: require('../assets/scan.png'),
   notification: require('../assets/notification.png'),
+  coin: require('../assets/points.png'),
+  pending: require('../assets/tier.png')
 };
 
 const welcomeScreen = {

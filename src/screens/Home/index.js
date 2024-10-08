@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   ImageBackground,
+  StatusBar,
 } from 'react-native';
 import styles from './styles';
 import ImageHeader from '../../components/ImageHeader';
@@ -117,19 +118,19 @@ const Home = () => {
             </Text>
 
             <TouchableOpacity style={styles.referNowBtn}>
-              <Text style={styles.referBtnText} size="eleven">
+              <Text style={styles.referBtnText} size="xxxSmall">
                 Refer Now
               </Text>
             </TouchableOpacity>
           </View>
         </View>
 
-        <ImageBackground
+        {/* <ImageBackground
           borderTopRightRadius={Metrics.ratio(10)}
           borderBottomRightRadius={Metrics.ratio(10)}
           source={Images.dummy.referBanner}
           style={styles.rightBannerImageView}
-        />
+        /> */}
       </View>
     );
   };
@@ -185,10 +186,14 @@ const Home = () => {
     );
   };
   return (
-    <View style={styles.mainScrollViewStyle}>
-      <ImageHeader title={en.homeScreen.hi + ' ' + en.homeScreen.name} />
-      {mainRender()}
-    </View>
+    <>
+      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} translucent={true} />
+
+      <View style={styles.mainScrollViewStyle}>
+        <ImageHeader title={en.homeScreen.hi + ' ' + en.homeScreen.name} />
+        {mainRender()}
+      </View>
+    </>
   );
 };
 

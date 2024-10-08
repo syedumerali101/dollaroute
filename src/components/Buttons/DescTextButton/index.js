@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 
   description: {
     color: Colors.lightMode.grey5,
-    fontSize: Metrics.ratio(10),
+    fontSize: Metrics.ratio(16),
   },
 
   textBtnView: {
@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
 
   textBtnStyle: {
     color: Colors.lightMode.pink,
-    fontSize: Metrics.ratio(10),
+    fontSize: Metrics.ratio(16),
     textDecorationLine: 'underline',
-    fontWeight: '500',
+    fontWeight: '800',
   },
 });
 

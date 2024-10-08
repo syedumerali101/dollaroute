@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: Colors.lightMode.grey5,
     // fontSize: Metrics.ratio(11),
     fontWeight: '700',
-    marginTop: Metrics.ratio(10),
+    marginTop: Metrics.ratio(15),
   }
 });
 

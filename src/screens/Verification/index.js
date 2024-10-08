@@ -18,6 +18,7 @@ import moment from 'moment';
 import {verificationEmail} from '../../configs/Constants';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 import Text from '../../components/Text';
+import { navigate } from '../../utils/navigation';
 
 const Verification = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -116,7 +117,7 @@ const Verification = ({navigation}) => {
         </TouchableOpacity>
 
         <SubmitButton
-          onPress={() => navigation?.navigate('Login')}
+          onPress={() => navigate('ResetPassword')}
           title={en.verificationScreen.submitBtnText}
           style={styles.submitButtonStyle}
         />

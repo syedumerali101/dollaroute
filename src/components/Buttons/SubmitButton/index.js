@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   touchableButtonStyle: {
     width: Metrics.screenWidth * 0.85,
     backgroundColor: Colors.lightMode.pink,
-    height: Metrics.ratio(40),
+    height: Metrics.ratio(50),
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: Metrics.ratio(10),

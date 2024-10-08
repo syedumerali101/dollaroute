@@ -4,7 +4,7 @@ import {Colors, Metrics} from '../../../theme';
 export default style = StyleSheet.create({
   textInputView: {
     width: Metrics.screenWidth * 0.9,
-    height: Metrics.ratio(40),
+    height: Metrics.ratio(52),
     borderColor: Colors.lightMode.grey8,
     borderWidth: Metrics.ratio(1.5),
     flexDirection: 'row',
@@ -14,7 +14,7 @@ export default style = StyleSheet.create({
 
   customStyle: {
     width: Metrics.screenWidth * 0.9,
-    height: Metrics.ratio(40),
+    height: Metrics.ratio(52),
     borderColor: Colors.lightMode.pink,
     borderWidth: Metrics.ratio(1.5),
     flexDirection: 'row',

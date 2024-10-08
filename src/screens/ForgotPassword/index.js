@@ -7,6 +7,7 @@ import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 import Text from '../../components/Text';
+import {navigate} from '../../utils/navigation';
 
 const ForgotPassword = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -20,12 +21,15 @@ const ForgotPassword = ({navigation}) => {
 
   const onSubmit = () => {
     console.log(email, 'email sent');
+    navigate('Verification');
   };
 
   const renderInputFields = () => {
     return (
       <View style={styles.mainInputContainer}>
-        <Text size='large' style={styles.headingTextStyle}>{en.forgotPassword.heading}</Text>
+        <Text size="large" style={styles.headingTextStyle}>
+          {en.forgotPassword.heading}
+        </Text>
 
         <AuthTextInput
           value={email}
@@ -40,7 +44,7 @@ const ForgotPassword = ({navigation}) => {
         <SubmitButton
           title={en.forgotPassword.submitBtnText}
           style={styles.submitButtonStyle}
-          onPress={() => navigation.navigate('EmailSent')}
+          onPress={onSubmit}
         />
       </View>
     );

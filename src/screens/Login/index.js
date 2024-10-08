@@ -8,6 +8,7 @@ import SubmitButton from '../../components/Buttons/SubmitButton';
 import TextButton from '../../components/Buttons/TextButton';
 import DescTextButton from '../../components/Buttons/DescTextButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
+import {navigate} from '../../utils/navigation';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState(null);
@@ -26,7 +27,7 @@ const Login = ({navigation}) => {
   };
 
   const onSubmit = () => {
-    console.log(email, password, 'email and password');
+    navigate('TabNavigator');
   };
 
   const renderInputFields = () => {
@@ -53,7 +54,7 @@ const Login = ({navigation}) => {
         <SubmitButton
           title={en.loginScreen.submitBtnText}
           style={styles.submitButtonStyle}
-          onPress={() => navigation.navigate('Verification')}
+          onPress={onSubmit}
         />
 
         <TextButton

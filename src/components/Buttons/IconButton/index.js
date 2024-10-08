@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: Metrics.screenWidth * 0.9,
-    height: Metrics.ratio(40),
+    height: Metrics.ratio(50),
     justifyContent: 'center',
     borderRadius: Metrics.ratio(10),
     borderWidth: Metrics.ratio(1.5),
     borderColor: Colors.lightMode.grey8,
-    marginTop: Metrics.ratio(10),
+    marginTop: Metrics.ratio(15),
     marginBottom: Metrics.ratio(20)
   },
 
