@@ -57,7 +57,7 @@ const Home = () => {
 
   const renderItem = ({item}) => {
     return (
-      <View key={item?.lineId} style={styles.homeBannerView}>
+      <View key={item?.id} style={styles.homeBannerView}>
         <Image style={styles.homeBannerStyle} source={item?.image} />
       </View>
     );
@@ -111,26 +111,26 @@ const Home = () => {
         <View style={styles.leftBannerView}>
           <View style={styles.referDetailsView}>
             <Text style={styles.referFriendTextStyle} size="fourteen">
-              Refer a Friend and{' '}
+              {en.homeScreen.referAFriend}{' '}
             </Text>
             <Text style={styles.earnTextStyle} size="sixteen">
-              Earn $10!
+              {en.homeScreen.earnAmount}
             </Text>
 
-            <TouchableOpacity style={styles.referNowBtn}>
+            <TouchableOpacity activeOpacity={1} style={styles.referNowBtn}>
               <Text style={styles.referBtnText} size="xxxSmall">
-                Refer Now
+                {en.homeScreen.referNow}
               </Text>
             </TouchableOpacity>
           </View>
         </View>
 
-        {/* <ImageBackground
+        <ImageBackground
           borderTopRightRadius={Metrics.ratio(10)}
           borderBottomRightRadius={Metrics.ratio(10)}
           source={Images.dummy.referBanner}
           style={styles.rightBannerImageView}
-        /> */}
+        />
       </View>
     );
   };
@@ -187,7 +187,11 @@ const Home = () => {
   };
   return (
     <>
-      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} translucent={true} />
+      <StatusBar
+        backgroundColor={'transparent'}
+        barStyle={'dark-content'}
+        translucent={true}
+      />
 
       <View style={styles.mainScrollViewStyle}>
         <ImageHeader title={en.homeScreen.hi + ' ' + en.homeScreen.name} />

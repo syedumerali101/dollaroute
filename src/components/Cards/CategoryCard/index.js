@@ -12,7 +12,7 @@ import {Colors, Metrics} from '../../../theme';
 const CategoryCard = ({item}) => {
   const {image, icon, title, points, name} = item;
   return (
-    <TouchableOpacity style={styles.mainContainer}>
+    <TouchableOpacity activeOpacity={1} style={styles.mainContainer}>
       <ImageBackground
         borderTopLeftRadius={Metrics.ratio(10)}
         borderTopRightRadius={Metrics.ratio(10)}

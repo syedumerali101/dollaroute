@@ -69,6 +69,9 @@
 
   "homeScreen":{
     "hi": "Hi,",
-    "name": "Uzair Ahmed"
+    "name": "Uzair Ahmed",
+    "referAFriend": "Refer a Friend and",
+    "earnAmount": "Earn $10!",
+    "referNow": "Refer Now",
   }
 }

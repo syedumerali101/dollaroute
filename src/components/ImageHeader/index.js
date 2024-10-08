@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   StyleSheet,
   View,
@@ -24,8 +24,6 @@ const ImageHeader = ({
           <Text size="large" style={styles.leftText}>
             {title}
           </Text>
-
-          {/* Add Cashback and Pending Section */}
         </View>
 
         <View style={styles.rightViewContainer}>
@@ -48,16 +46,28 @@ const ImageHeader = ({
       <View style={styles.cashbackContainer}>
         <View style={styles.cashbackSection}>
           <Image source={Images.common.coin} style={styles.cashbackIcon} />
-          <Text style={styles.cashbackText}>Total Cashback</Text>
-          <Text style={styles.cashbackAmount}>{totalCashback}</Text>
+          <View>
+            <Text size="xxxSmall" style={styles.cashbackText}>
+              Total Cashback
+            </Text>
+            <Text size="fourteen" style={styles.cashbackAmount}>
+              {totalCashback}
+            </Text>
+          </View>
         </View>
 
         <View style={styles.separator} />
 
-        <View style={styles.cashbackSection}>
+        <View style={styles.pendingView}>
           <Image source={Images.common.pending} style={styles.pendingIcon} />
-          <Text style={styles.cashbackText}>Pending</Text>
-          <Text style={styles.cashbackAmount}>{pendingCashback}</Text>
+          <View>
+            <Text size="xxxSmall" style={styles.cashbackText}>
+              Pending
+            </Text>
+            <Text size="fourteen" style={styles.cashbackAmount}>
+              {pendingCashback}
+            </Text>
+          </View>
         </View>
       </View>
     </ImageBackground>
@@ -67,7 +77,7 @@ const ImageHeader = ({
 const styles = StyleSheet.create({
   mainHeaderStyle: {
     resizeMode: 'contain',
-    height: Metrics.screenHeight * 0.18,
+    height: Metrics.screenHeight * 0.25,
     width: Metrics.screenWidth,
   },
 
@@ -91,35 +101,42 @@ const styles = StyleSheet.create({
 
   cashbackContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    marginTop: Metrics.ratio(10),
+    marginTop: Metrics.ratio(20),
     width: Metrics.screenWidth * 1,
     alignSelf: 'center',
     bottom: 0,
-    height: Metrics.ratio(58),
+    height: Metrics.screenHeight * 0.2,
     backgroundColor: 'rgba(255,222,226,0.12)',
-    alignItems: 'center',
     borderTopRightRadius: Metrics.ratio(16),
     borderTopLeftRadius: Metrics.ratio(16),
+    justifyContent: 'center',
   },
 
   cashbackSection: {
     alignItems: 'center',
     flexDirection: 'row',
-    width:'40%',
+    width: Metrics.screenWidth * 0.4,
+    marginBottom: Metrics.screenHeight * 0.11
+  },
+
+  pendingView: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: Metrics.screenWidth * 0.4,
+    justifyContent: 'center',
+    marginBottom: Metrics.screenHeight * 0.11
   },
 
   cashbackIcon: {
-    height: Metrics.ratio(20),
-    width: Metrics.ratio(20),
-    marginRight: Metrics.ratio(5),
+    height: Metrics.ratio(28),
+    width: Metrics.ratio(28),
+    marginRight: Metrics.ratio(2),
     resizeMode: 'contain',
   },
 
   cashbackText: {
-    color: Colors.white,
-    fontWeight: '500',
-    marginRight: Metrics.ratio(5),
+    color: Colors.lightMode.lightPink3,
+    fontWeight: '600',
   },
 
   cashbackAmount: {
@@ -128,15 +145,15 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    width: 1,
+    width: Metrics.ratio(1),
     height: Metrics.ratio(30),
-    backgroundColor: Colors.white,
-    marginHorizontal: Metrics.ratio(10),
+    backgroundColor: 'rgba(255,222,226,0.12)',
+    marginTop: Metrics.ratio(18)
   },
 
   pendingIcon: {
-    height: Metrics.ratio(15),
-    width: Metrics.ratio(15),
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
     marginRight: Metrics.ratio(5),
     resizeMode: 'contain',
   },

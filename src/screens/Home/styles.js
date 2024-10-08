@@ -41,9 +41,9 @@ const styles = StyleSheet.create({
   mainRenderContainer: {
     backgroundColor: Colors.lightMode.white,
     height: Metrics.screenHeight,
-    borderTopLeftRadius: Metrics.ratio(10),
-    borderTopRightRadius: Metrics.ratio(10),
-    borderBottomColor: 'red',
+    borderTopLeftRadius: Metrics.ratio(20),
+    borderTopRightRadius: Metrics.ratio(20),
+    bottom: Metrics.ratio(25)
   },
 
   rowBtnStyle: {
@@ -73,13 +73,14 @@ const styles = StyleSheet.create({
   },
 
   featuredContentContainerStyle: {
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   referBannerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.lightMode.pink,
+    // backgroundColor: Colors.lightMode.pink,
     width: Metrics.screenWidth * 0.9,
     height: Metrics.screenHeight * 0.16,
     alignSelf: 'center',
@@ -103,8 +104,8 @@ const styles = StyleSheet.create({
   rightBannerImageView: {
     resizeMode: 'contain',
     height: Metrics.screenHeight * 0.16,
-    width: Metrics.screenWidth * 0.45,
-    right: Metrics.ratio(30),
+    width: Metrics.screenWidth * 0.51,
+    right: Metrics.ratio(60),
   },
 
   referDetailsView: {
@@ -142,7 +143,6 @@ const styles = StyleSheet.create({
 
   promoContentContainerStyle: {
     alignItems: 'center',
-    margin: Metrics.ratio(2),
     marginBottom: Metrics.ratio(20),
   },
 

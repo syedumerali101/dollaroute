@@ -24,6 +24,7 @@ const tabIcons = {
 const TabNavigator = props => {
   return (
     <Tab.Navigator
+      swipeEnabled={false}
       tabBarPosition="bottom"
       tabBar={tabProps => <MyTabBar {...tabProps} {...props} />}>
       <Tab.Screen name="Home" component={HomeStack} />
