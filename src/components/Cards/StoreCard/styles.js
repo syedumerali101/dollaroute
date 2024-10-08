@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
   nameRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    width: Metrics.screenWidth * 0.4,
   },
   offersText: {
     color: Colors.lightMode.pink,
@@ -54,6 +55,9 @@ const styles = StyleSheet.create({
   iconsContainer: {
     justifyContent: 'space-between',
     height: Metrics.screenHeight * 0.09,
+  },
+  reviewText: {
+    marginLeft: Metrics.screenWidth * 0.03,
   },
 });
 

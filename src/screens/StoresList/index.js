@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ImageBackground} from 'react-native';
+import {View, ImageBackground, Image, TouchableOpacity} from 'react-native';
 
 import Images from '../../theme/Images';
 import styles from './styles';
@@ -47,11 +47,21 @@ const StoresList = () => {
   return (
     <View>
       <ImageBackground source={Images.common.map} style={styles.map}>
+        <View style={styles.iconsContainer}>
+          <TouchableOpacity style={styles.iconCircle} activeOpacity={0.7}>
+            <Image source={Images.common.filter} style={styles.icon} />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.iconCircle} activeOpacity={0.7}>
+            <Image source={Images.common.location} style={styles.icon} />
+          </TouchableOpacity>
+        </View>
+
         <View style={styles.contentContainer}>
           <Text size="xLarge" style={styles.heading}>
             Nearby Stores
           </Text>
-          <Text>Downtown Brooklyn, New York</Text>
+          <Text style={styles.location}>Downtown Brooklyn, New York</Text>
 
           {renderStores()}
         </View>

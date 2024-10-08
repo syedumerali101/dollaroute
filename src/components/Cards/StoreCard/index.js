@@ -16,7 +16,9 @@ const StoreCard = ({image, name, location, wishlist}) => {
           <Text size="normal" style={styles.name}>
             {name}
           </Text>
-          <Text style={styles.offersText}>Best Offers</Text>
+          <Text size="xxSmall" style={styles.offersText}>
+            Best Offers
+          </Text>
         </View>
         <Text>{location}</Text>
         <View style={styles.ratingRow}>
@@ -26,7 +28,7 @@ const StoreCard = ({image, name, location, wishlist}) => {
             imageSize={15}
             style={styles.rating}
           />
-          <Text>(895 reviews)</Text>
+          <Text style={styles.reviewText}>(895 reviews)</Text>
         </View>
       </View>
 

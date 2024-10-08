@@ -13,6 +13,8 @@ const common = {
   heart: require('../assets/heart.png'),
   heartFill: require('../assets/heartFill.png'),
   share: require('../assets/share.png'),
+  filter: require('../assets/filter.png'),
+  location: require('../assets/location.png'),
 };
 
 const welcomeScreen = {
