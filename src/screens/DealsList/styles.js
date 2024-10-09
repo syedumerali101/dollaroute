@@ -6,11 +6,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.lightMode.white,
+    paddingTop: Metrics.screenHeight * 0.05,
   },
   buttonsRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: Metrics.screenHeight * 0.02,
+    marginBottom: Metrics.screenHeight * 0.02,
+    marginTop: Metrics.screenHeight * 0.03,
+    marginHorizontal: Metrics.screenWidth * 0.03,
   },
   button: {
     alignItems: 'center',
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
     paddingVertical: Metrics.screenWidth * 0.015,
     paddingHorizontal: Metrics.screenWidth * 0.04,
     borderRadius: Metrics.screenHeight * 0.02,
-    marginHorizontal: Metrics.screenWidth * 0.02,
+    marginHorizontal: Metrics.screenWidth * 0.01,
   },
   buttonText: {
     textTransform: 'capitalize',

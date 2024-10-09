@@ -37,11 +37,30 @@ const styles = StyleSheet.create({
   typeContainer: {
     backgroundColor: '#FFF8E6',
     borderRadius: Metrics.screenWidth * 0.04,
-    padding: Metrics.screenWidth * 0.02,
+    paddingVertical: Metrics.screenWidth * 0.015,
+    paddingHorizontal: Metrics.screenWidth * 0.03,
   },
   cashbackText: {
     color: Colors.TextSecondary,
     fontWeight: '700',
+  },
+  expiry: {
+    marginLeft: Metrics.screenWidth * 0.02,
+    color: '#CC1A22',
+  },
+  activateText: {
+    color: Colors.lightMode.pink,
+    fontWeight: 'bold',
+    alignSelf: 'flex-end',
+    marginRight: Metrics.screenWidth * 0.02,
+    textTransform: 'capitalize',
+  },
+  thirdContainer: {
+    height: Metrics.screenHeight * 0.08,
+    justifyContent: 'space-between',
+  },
+  name: {
+    textTransform: 'capitalize',
   },
 });
 

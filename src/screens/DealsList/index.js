@@ -1,11 +1,57 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, TouchableOpacity} from 'react-native';
 
 import DealCard from '../../components/Cards/DealCard';
 import styles from './styles';
 import Text from '../../components/Text';
+import SearchTextInput from '../../components/Inputs/SearchTextInput';
+import en from '../../translations/en.json';
+import Images from '../../theme/Images';
 
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const deals = [
+  {
+    id: 1,
+    image: Images.common.nike,
+    title: 'nike',
+    cashback: '10% Cashback',
+    action: 'activate now',
+  },
+  {
+    id: 2,
+    image: Images.common.amazon,
+    title: 'amazon',
+    cashback: '5% Cashback',
+    action: 'shop now',
+  },
+  {
+    id: 3,
+    image: Images.common.walmart,
+    title: 'walmart',
+    cashback: '$10 Off $50+',
+    action: 'redeem offer',
+  },
+  {
+    id: 4,
+    image: Images.common.mcdonald,
+    title: 'mcdonald',
+    cashback: '35% Cashback',
+    action: 'shop now',
+  },
+  {
+    id: 5,
+    image: Images.common.hermes,
+    title: 'hermes',
+    cashback: '35% Cashback',
+    action: 'shop now',
+  },
+  {
+    id: 6,
+    image: Images.common.nike,
+    title: 'nike',
+    cashback: '10% Cashback',
+    action: 'activate now',
+  },
+];
 const buttons = [
   {id: 1, title: 'cashback'},
   {id: 2, title: 'coupons'},
@@ -13,25 +59,37 @@ const buttons = [
 ];
 
 const DealsList = () => {
-  const renderDealItem = () => {
-    return <DealCard />;
+  const renderDealItem = ({item}) => {
+    return (
+      <DealCard
+        image={item.image}
+        name={item.title}
+        cashback={item.cashback}
+        action={item.action}
+      />
+    );
   };
 
   const renderButtons = () => {
     return buttons.map(val => {
       return (
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
           <Text style={styles.buttonText}>{val.title}</Text>
-        </View>
+        </TouchableOpacity>
       );
     });
   };
 
+  const renderSearchBox = () => {
+    return <SearchTextInput placeHolder={en.categoriesScreen.search} />;
+  };
+
   return (
     <View style={styles.container}>
+      {renderSearchBox()}
       <View style={styles.buttonsRow}>{renderButtons()}</View>
       <FlatList
-        data={data}
+        data={deals}
         renderItem={renderDealItem}
         showsVerticalScrollIndicator={false}
       />

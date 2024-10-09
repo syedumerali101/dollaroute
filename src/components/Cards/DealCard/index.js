@@ -5,29 +5,35 @@ import styles from './styles';
 import Images from '../../../theme/Images';
 import Text from '../../Text';
 
-const DealCard = ({image, name, location, wishlist}) => {
+const DealCard = ({image, name, cashback, action}) => {
   return (
     <ImageBackground style={styles.container} source={Images.common.dealCard}>
-      <Image source={Images.common.nike} style={styles.image} />
+      <Image source={image} style={styles.image} />
 
       <View>
-        <Text>Nike</Text>
+        <Text style={styles.name}>{name}</Text>
         <Text size="normal" style={styles.cashbackText}>
-          10% Cashback
+          {cashback}
         </Text>
 
         <View style={styles.calendarRow}>
           <Image source={Images.common.calendar} style={styles.calendar} />
-          <Text>Expires in 3 Days</Text>
+          <Text size="xxSmall" style={styles.expiry}>
+            Expires in 3 Days
+          </Text>
         </View>
       </View>
 
-      <View>
+      <View style={styles.thirdContainer}>
         <View style={styles.typeContainer}>
-          <Text>Limited Time Offer</Text>
+          <Text size="xxSmall" style={styles.typeText}>
+            Limited Time Offer
+          </Text>
         </View>
 
-        <Text>Activate Now</Text>
+        <Text size="xxSmall" style={styles.activateText}>
+          {action}
+        </Text>
       </View>
     </ImageBackground>
   );

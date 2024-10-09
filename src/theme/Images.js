@@ -20,6 +20,8 @@ const common = {
   dealCard: require('../assets/dealCard.png'),
   nike: require('../assets/nike.png'),
   calendar: require('../assets/calendar.png'),
+  walmart: require('../assets/walmart.png'),
+  amazon: require('../assets/amazon.png'),
 };
 
 const welcomeScreen = {
@@ -70,8 +72,6 @@ const dummy = {
   skinBanner: require('../assets/skinBanner.png'),
   travelBanner: require('../assets/travelBanner.png'),
   airbn: require('../assets/airbn.png'),
-  
-
 };
 
 export default {
