@@ -22,6 +22,7 @@ const common = {
   calendar: require('../assets/calendar.png'),
   walmart: require('../assets/walmart.png'),
   amazon: require('../assets/amazon.png'),
+  rightArrow: require('../assets/rightArrow.png'),
 };
 
 const welcomeScreen = {
@@ -58,7 +59,7 @@ const dummy = {
   hermes: require('../assets/hermes.png'),
   airbnb: require('../assets/airbnb.png'),
   burgerKing: require('../assets/burgerKing.png'),
-
+  avatar: require('../assets/avatar.png'),
   referBanner: require('../assets/referBanner.png'),
   starbucksBanner: require('../assets/starbucksBanner.png'),
 
