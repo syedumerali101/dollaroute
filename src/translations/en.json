@@ -77,5 +77,14 @@
 
   "categoriesScreen": {
     "search": "Search..."
+  },
+
+  "dealsDetails": {
+    "description1": "Starbucks is a global coffee company and coffeehouse chain based in Seattle, Washington. Founded in 1971, it has grown to become the largest coffeehouse chain in the world, with over 30,000 locations globally. Starbucks is renowned for its high-quality coffee, including espresso-based drinks, brewed coffee, teas, pastries, and other snacks.",
+    "description2": "The company’s mission is to inspire and nurture the human spirit—one person, one cup, and one neighborhood at a time. Starbucks places a strong emphasis on ethical sourcing, sustainability, and community involvement, ensuring that its coffee is responsibly sourced and its stores foster a welcoming environment for customers."
+  },
+
+  "common": {
+    "reviews": "reviews"
   }
 }

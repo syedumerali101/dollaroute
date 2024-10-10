@@ -58,7 +58,7 @@ const buttons = [
   {id: 3, title: 'discounts'},
 ];
 
-const DealsList = () => {
+const DealsList = ({navigation}) => {
   const renderDealItem = ({item}) => {
     return (
       <DealCard
@@ -66,6 +66,7 @@ const DealsList = () => {
         name={item.title}
         cashback={item.cashback}
         action={item.action}
+        onPress={() => navigation?.navigate('DealsDetails')}
       />
     );
   };

@@ -9,15 +9,18 @@ import {
 import Text from '../../Text';
 import {Colors, Metrics} from '../../../theme';
 
-const CategoryCard = ({item}) => {
-  const {image, icon, title, points, name} = item;
+const CategoryCard = props => {
+  const {image, icon, title, points, name} = props?.item;
+  const {mainContainerStyle, imageBackgroundStyle} = props;
   return (
-    <TouchableOpacity activeOpacity={1} style={styles.mainContainer}>
+    <TouchableOpacity
+      activeOpacity={1}
+      style={[styles.mainContainer, mainContainerStyle]}>
       <ImageBackground
         borderTopLeftRadius={Metrics.ratio(10)}
         borderTopRightRadius={Metrics.ratio(10)}
         source={image}
-        style={styles.mainImageContainer}>
+        style={[styles.mainImageContainer, imageBackgroundStyle]}>
         <View style={styles.iconView}>
           <Image source={icon} style={styles.iconStyle} />
         </View>
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
     color: Colors.lightMode.grey10,
     fontWeight: '400',
     marginHorizontal: Metrics.ratio(10),
-    marginTop: Metrics.ratio(5)
+    marginTop: Metrics.ratio(5),
   },
 
   singleDotStyle: {
@@ -107,10 +110,8 @@ const styles = StyleSheet.create({
   titleText: {
     color: Colors.lightMode.black1,
     marginTop: Metrics.ratio(8),
-    marginHorizontal: Metrics.ratio(10)
+    marginHorizontal: Metrics.ratio(10),
   },
-
-
 });
 
 export default CategoryCard;

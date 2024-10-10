@@ -73,6 +73,7 @@ const dummy = {
   skinBanner: require('../assets/skinBanner.png'),
   travelBanner: require('../assets/travelBanner.png'),
   airbn: require('../assets/airbn.png'),
+  dummyDetailBanner: require('../assets/dummyDetailBanner.jpeg')
 };
 
 export default {

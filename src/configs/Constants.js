@@ -80,7 +80,6 @@ export const featuredShops = () => [
     title: 'Burger King',
     image: Images.dummy.burgerKing,
   },
-
 ];
 
 export const promoRewards = () => [
@@ -139,7 +138,7 @@ export const electronicsData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
-]
+];
 
 export const clothingData = () => [
   {
@@ -159,7 +158,7 @@ export const clothingData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
-]
+];
 
 export const groceriesData = () => [
   {
@@ -179,7 +178,7 @@ export const groceriesData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
-]
+];
 
 export const travelData = () => [
   {
@@ -199,7 +198,7 @@ export const travelData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
-]
+];
 
 export const skinData = () => [
   {
@@ -219,7 +218,7 @@ export const skinData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
-]
+];
 
 export const categoriesTags = () => [
   {
@@ -245,4 +244,49 @@ export const categoriesTags = () => [
     id: 5,
     title: 'Health & Beauty',
   },
+];
+
+export const dealsDetailsTabs = () => [
+  {
+    id: 1,
+    title: 'Info',
+  },
+  {
+    id: 2,
+    title: 'Rewards',
+  },
+  {
+    id: 3,
+    title: 'Store',
+  },
+];
+
+export const rewardsData = () => [
+  {
+    id: 1,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 2,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+
+  {
+    id: 3,
+    image: Images.dummy.starbucksBanner,
+    icon: Images.dummy.starbucks,
+    title: 'Get Free 1 Cup Coffee E-Voucher ',
+    points: '4,500 points',
+    name: 'Starbucks',
+  },
+ 
 ];

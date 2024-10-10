@@ -162,7 +162,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     top: Metrics.screenHeight * 0.22
-  }
+  },
+
+ 
 });
 
 export default styles;
