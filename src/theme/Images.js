@@ -23,6 +23,11 @@ const common = {
   walmart: require('../assets/walmart.png'),
   amazon: require('../assets/amazon.png'),
   rightArrow: require('../assets/rightArrow.png'),
+  clock: require('../assets/clock.png'),
+  phone: require('../assets/phone.png'),
+  locationMarker: require('../assets/locationMarker.png'),
+  send: require('../assets/send.png'),
+  
 };
 
 const welcomeScreen = {

@@ -56,6 +56,8 @@ const styles = StyleSheet.create({
   listStyle: {
     width: Metrics.screenWidth,
   },
+
+
 });
 
 export default styles;

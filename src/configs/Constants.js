@@ -290,3 +290,57 @@ export const rewardsData = () => [
   },
  
 ];
+
+export const addressData = () => [
+  {
+    id: 1,
+    from: 'Starbucks',
+    to: 'Time Square',
+    details: [
+      {
+        id: 1,
+        icon: Images.common.locationMarker,
+        title: '1500 Broadway, New Your, NY 10036'
+      },
+
+      {
+        id: 2,
+        icon: Images.common.clock,
+        title: '6:00 AM - 10:00 PM'
+      },
+
+      {
+        id: 3,
+        icon: Images.common.phone,
+        title: '+92 310 473 471'
+      },
+    ]
+  },
+
+  {
+    id: 2,
+    from: 'Starbucks',
+    to: 'Time Square',
+    details: [
+      {
+        id: 1,
+        icon: Images.common.locationMarker,
+        title: '1500 Broadway, New Your, NY 10036'
+      },
+
+      {
+        id: 2,
+        icon: Images.common.clock,
+        title: '6:00 AM - 10:00 PM'
+      },
+
+      {
+        id: 3,
+        icon: Images.common.phone,
+        title: '+92 310 473 471'
+      },
+    ]
+  },
+]
+
+

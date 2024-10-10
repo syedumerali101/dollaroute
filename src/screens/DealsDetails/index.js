@@ -3,12 +3,18 @@ import {FlatList, ScrollView, StatusBar, View} from 'react-native';
 import styles from './styles';
 import ImageBackgroundHeader from '../../components/ImageBackgroundHeader';
 import Images from '../../theme/Images';
-import {dealsDetailsTabs, rewardsData} from '../../configs/Constants';
+import {
+  addressData,
+  dealsDetailsTabs,
+  rewardsData,
+} from '../../configs/Constants';
 import Text from '../../components/Text';
 import Tabs from '../../components/Tabs';
 import en from '../../translations/en.json';
 import RatingCard from '../../components/RatingCard';
 import CategoryCard from '../../components/Cards/CategoryCard';
+import SearchTextInput from '../../components/Inputs/SearchTextInput';
+import AddressCard from '../../components/Cards/AddressCard';
 
 const DealsDetails = () => {
   const scrollViewRef = useRef(null);
@@ -52,7 +58,7 @@ const DealsDetails = () => {
       );
     }
 
-    if (activeTab == 2) {
+    if (activeTab === 2) {
       return (
         <FlatList
           data={rewardsData()}
@@ -60,6 +66,22 @@ const DealsDetails = () => {
           style={styles.listStyle}
           contentContainerStyle={styles.rewardsContainerStyle}
         />
+      );
+    }
+
+    if (activeTab === 3) {
+      return (
+        <View>
+          <SearchTextInput placeHolder={en.categoriesScreen.search} />
+          {addressData()?.map((item, index) => {
+            return (
+              <AddressCard
+                data={item?.details}
+                title={`${item?.from} - ${item?.to}`}
+              />
+            );
+          })}
+        </View>
       );
     }
   };
