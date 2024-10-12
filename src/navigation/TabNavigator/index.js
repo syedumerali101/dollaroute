@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {Image, TouchableOpacity, View, Text} from 'react-native';
 import styles from './styles';
-import AuthStack from '../AuthStack';
-import {Metrics} from '../../theme';
 import Images from '../../theme/Images';
 import HomeStack from '../HomeStack';
 import StoreStack from '../StoreStack';
@@ -33,7 +31,10 @@ const TabNavigator = props => {
       <Tab.Screen name="Stores" component={StoreStack} />
       <Tab.Screen name="Deals" component={DealStack} />
       <Tab.Screen name="Categories" component={CategoriesStack} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+      />
     </Tab.Navigator>
   );
 };

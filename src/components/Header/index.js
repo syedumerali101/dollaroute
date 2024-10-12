@@ -2,30 +2,32 @@ import React from 'react';
 import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Colors, Metrics} from '../../theme';
 import Images from '../../theme/Images';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import Text from '../Text';
 
-const Header = ({title}) => {
+const Header = ({title, rightView, headerContainer, titleTextStyle, leftIconStyle}) => {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity activeOpacity={1} onPress={() => navigation?.goBack()} style={styles.headerContainer}>
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={() => navigation?.goBack()}
+      style={[styles.headerContainer, headerContainer]}>
       <View style={styles.leftView}>
         <Image
-          style={styles.leftIconStyle}
+          style={[styles.leftIconStyle, leftIconStyle]}
           source={Images.loginScreen.leftArrow}
         />
       </View>
 
       <View style={styles.centerView}>
-        <Text size='eighteen' style={styles.centerText}>{title}</Text>
+        <Text size="eighteen" style={[styles.centerText, titleTextStyle]}>
+          {title}
+        </Text>
       </View>
 
-      {/* <View style={styles.rightView}>
-        <Image
-          style={styles.rightIconStyle}
-          source={Images.loginScreen.leftArrow}
-        />
-      </View> */}
+      <View style={styles.rightView}>
+        {rightView ? rightView : null}
+      </View>
     </TouchableOpacity>
   );
 };
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
   centerView: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: Metrics.screenWidth * 0.7,
+    width: Metrics.screenWidth * 0.71,
   },
 
   centerText: {

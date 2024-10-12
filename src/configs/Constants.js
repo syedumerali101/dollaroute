@@ -424,4 +424,30 @@ export const redeemPoints = {
   ],
 };
 
+export const detailsData = () => [
+  {
+    id: 1,
+    title: 'Mechant',
+    text: 'Starbucks'
+  },
+
+  {
+    id: 2,
+    title: 'Points Used',
+    text: '3,750 pts'
+  },
+  {
+    id: 3,
+    title: 'Voucher Code',
+    text: 'VCO31541ST'
+  },
+
+  {
+    id: 4,
+    title: 'Voucher Code',
+    text: 'Dec 31, 2024'
+  },
+
+]
+
 

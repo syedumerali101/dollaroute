@@ -28,6 +28,7 @@ const Rewards = ({navigation}) => {
   const handleVoucher = () => {
     setVoucherShowing(false);
     setLoading(false);
+    navigation.navigate('VoucherDetails')
   };
 
   const handleNavigateBack = () => {

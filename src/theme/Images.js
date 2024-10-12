@@ -28,6 +28,8 @@ const common = {
   locationMarker: require('../assets/locationMarker.png'),
   send: require('../assets/send.png'),
   redeemIcon: require('../assets/redeemIcon.png'),
+  download: require('../assets/download.png'),
+  
 };
 
 const welcomeScreen = {
@@ -78,7 +80,9 @@ const dummy = {
   skinBanner: require('../assets/skinBanner.png'),
   travelBanner: require('../assets/travelBanner.png'),
   airbn: require('../assets/airbn.png'),
-  dummyDetailBanner: require('../assets/dummyDetailBanner.jpeg')
+  dummyDetailBanner: require('../assets/dummyDetailBanner.jpeg'),
+  barcode: require('../assets/barcode.png'),
+
 };
 
 export default {
