@@ -117,41 +117,51 @@ export default StyleSheet.create({
     marginTop: Metrics.ratio(50),
   },
   optionsSection: {
-    marginTop: -Metrics.ratio(5),
     borderTopLeftRadius: Metrics.ratio(16),
     borderTopRightRadius: Metrics.ratio(16),
     backgroundColor: Colors.white,
     width: '100%',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.0,
+    elevation: 1,
   },
   optionItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: Metrics.ratio(10),
     borderBottomWidth: 1,
-    borderBottomColor: Colors.white,
-    height: Metrics.ratio(50),
-    width: Metrics.ratio(350),
-    marginTop: Metrics.ratio(8),
+    borderBottomColor: Colors.lightMode.lightGray7,
+    height: Metrics.ratio(40),
+    width: Metrics.screenWidth * 0.9,
     borderRadius: Metrics.ratio(0.2),
     elevation: 1,
     alignItems: 'center',
+    
   },
   optionText: {
     color: Colors.TextSecondary,
-    fontWeight: '800',
+    fontWeight: '500',
   },
   arrowIcon: {
     width: Metrics.ratio(8),
     height: Metrics.ratio(8),
   },
   logoutButton: {
-    padding: Metrics.ratio(10),
     backgroundColor: Colors.white,
-    width: Metrics.ratio(350),
     height: Metrics.ratio(50),
     justifyContent: 'center',
-    marginTop: Metrics.ratio(10),
+    marginTop: Metrics.ratio(5),
+    padding: Metrics.ratio(10),
+    height: Metrics.ratio(40),
+    width: Metrics.screenWidth * 0.9,
+    borderRadius: Metrics.ratio(0.2),
+    elevation: 1,
   },
   logoutText: {
     color: Colors.lightModeTextInput.errorColor,
@@ -186,11 +196,38 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   optionHeading: {
-    fontSize: Metrics.ratio(14),
     color: Colors.lightText,
-    fontWeight: '700',
-    marginTop: Metrics.ratio(35),
+    fontWeight: '500',
+    marginTop: Metrics.ratio(25),
     width: Metrics.ratio(370),
     marginBottom: Metrics.ratio(10),
   },
+  mainPointRow: {
+    width: Metrics.screenWidth,
+    backgroundColor: Colors.lightMode.white,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+  },
+
+  innerPointRow: {
+    width: Metrics.screenWidth * 0.9,
+    alignSelf: 'center',
+    
+    
+  },
+
+  mainRenderContainer: {
+    paddingVertical: Metrics.ratio(10),
+    width: Metrics.screenWidth,
+  },
+
+  contentContainerStyle:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingBottom: Metrics.ratio(40)
+
+
+  }
 });

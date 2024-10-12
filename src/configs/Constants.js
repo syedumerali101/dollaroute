@@ -448,6 +448,18 @@ export const detailsData = () => [
     text: 'Dec 31, 2024'
   },
 
-]
+];
+
+export const GeneralList = () => [
+  {title: 'Account Information', route: 'AccountInfo'},
+  {title: 'Cashback Withdrawal', route: 'CashbackWithdraw'},
+  {title: 'Referral', route: 'Referral'},
+  {title: 'Settings', route: 'Settings'},
+];
+export const SupportList = () => [
+  {title: 'Terms and Privacy Policy', route: 'PrivacyPolicy'},
+  {title: 'FAQ', route: 'FAQ'},
+  {title: 'Help', route: 'Help'},
+];
 
 

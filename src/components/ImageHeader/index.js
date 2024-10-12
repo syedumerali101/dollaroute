@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import {
   StyleSheet,
   View,
@@ -14,64 +14,114 @@ const ImageHeader = ({
   title,
   totalCashback = '$50',
   pendingCashback = '$50',
+  profile,
+  phone,
+  earned,
 }) => {
-  return (
-    <ImageBackground
-      style={styles.mainHeaderStyle}
-      source={Images.common.imageBackground}>
-      <View style={styles.mainHeaderRow}>
-        <View style={styles.leftViewContainer}>
-          <Text size="large" style={styles.leftText}>
-            {title}
-          </Text>
-        </View>
+  if (profile) {
+    return (
+      <ImageBackground
+        style={styles.mainHeaderStyle}
+        source={Images.common.imageBackground}>
+        <View style={styles.mainHeaderRow}>
+          <View style={styles.avatarView}>
+            <Image style={styles.avatarStyle} source={Images.dummy.avatar} />
+          </View>
 
-        <View style={styles.rightViewContainer}>
-          <TouchableOpacity activeOpacity={1} style={styles.scanBtnStyle}>
-            <Image source={Images.common.scan} style={styles.scanIconStyle} />
-          </TouchableOpacity>
+          <View style={styles.centerViewStyle}>
+            <Text size="large" style={styles.leftText}>
+              {title}
+            </Text>
+            <Text size="fourteen" style={styles.leftSubTextStyle}>
+              {phone}
+            </Text>
+          </View>
 
-          <TouchableOpacity activeOpacity={1} style={styles.notificationsBtn}>
+          <TouchableOpacity activeOpacity={1} style={styles.rightBtnContainer}>
             <Image
-              source={Images.common.notification}
-              style={styles.notificationIcon}
+              style={styles.rightBtnIconStyle}
+              source={Images.common.scan}
             />
-
-            <View style={styles.notificationCountView}>
-              <Text style={styles.countText}>1</Text>
-            </View>
           </TouchableOpacity>
         </View>
-      </View>
-      <View style={styles.cashbackContainer}>
-        <View style={styles.cashbackSection}>
-          <Image source={Images.common.coin} style={styles.cashbackIcon} />
-          <View>
-            <Text size="xxxSmall" style={styles.cashbackText}>
-              Total Cashback
-            </Text>
-            <Text size="fourteen" style={styles.cashbackAmount}>
-              {totalCashback}
-            </Text>
+
+        <View style={styles.mainOuterContainer}>
+          <View style={styles.mainInnerContainer}>
+            <View style={styles.innerLeftView}>
+              <Image style={styles.innerLeftIcon} source={Images.common.coin} />
+            </View>
+
+            <View style={styles.centerView}>
+              <Text size='twelve' style={styles.innerHeading}>Total Cashback Earned</Text>
+              <Text size='sixteen' style={styles.innerSubHeading}>{earned}</Text>
+            </View>
+
+            <TouchableOpacity activeOpacity={1} style={styles.innerRightView}>
+              <Image source={Images.common.rightArrow} style={styles.innerRightIcon}/>
+            </TouchableOpacity>
           </View>
         </View>
-
-        <View style={styles.separator} />
-
-        <View style={styles.pendingView}>
-          <Image source={Images.common.pending} style={styles.pendingIcon} />
-          <View>
-            <Text size="xxxSmall" style={styles.cashbackText}>
-              Pending
-            </Text>
-            <Text size="fourteen" style={styles.cashbackAmount}>
-              {pendingCashback}
+      </ImageBackground>
+    );
+  } else {
+    return (
+      <ImageBackground
+        style={styles.mainHeaderStyle}
+        source={Images.common.imageBackground}>
+        <View style={styles.mainHeaderRow}>
+          <View style={styles.leftViewContainer}>
+            <Text size="large" style={styles.leftText}>
+              {title}
             </Text>
           </View>
+
+          <View style={styles.rightViewContainer}>
+            <TouchableOpacity activeOpacity={1} style={styles.scanBtnStyle}>
+              <Image source={Images.common.scan} style={styles.scanIconStyle} />
+            </TouchableOpacity>
+
+            <TouchableOpacity activeOpacity={1} style={styles.notificationsBtn}>
+              <Image
+                source={Images.common.notification}
+                style={styles.notificationIcon}
+              />
+
+              <View style={styles.notificationCountView}>
+                <Text style={styles.countText}>1</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
-    </ImageBackground>
-  );
+        <View style={styles.cashbackContainer}>
+          <View style={styles.cashbackSection}>
+            <Image source={Images.common.coin} style={styles.cashbackIcon} />
+            <View>
+              <Text size="xxxSmall" style={styles.cashbackText}>
+                Total Cashback
+              </Text>
+              <Text size="fourteen" style={styles.cashbackAmount}>
+                {totalCashback}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.separator} />
+
+          <View style={styles.pendingView}>
+            <Image source={Images.common.pending} style={styles.pendingIcon} />
+            <View>
+              <Text size="xxxSmall" style={styles.cashbackText}>
+                Pending
+              </Text>
+              <Text size="fourteen" style={styles.cashbackAmount}>
+                {pendingCashback}
+              </Text>
+            </View>
+          </View>
+        </View>
+      </ImageBackground>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
@@ -116,7 +166,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     width: Metrics.screenWidth * 0.4,
-    marginBottom: Metrics.screenHeight * 0.11
+    marginBottom: Metrics.screenHeight * 0.11,
   },
 
   pendingView: {
@@ -124,7 +174,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: Metrics.screenWidth * 0.4,
     justifyContent: 'center',
-    marginBottom: Metrics.screenHeight * 0.11
+    marginBottom: Metrics.screenHeight * 0.11,
   },
 
   cashbackIcon: {
@@ -148,7 +198,7 @@ const styles = StyleSheet.create({
     width: Metrics.ratio(1),
     height: Metrics.ratio(30),
     backgroundColor: 'rgba(255,222,226,0.12)',
-    marginTop: Metrics.ratio(18)
+    marginTop: Metrics.ratio(18),
   },
 
   pendingIcon: {
@@ -207,6 +257,99 @@ const styles = StyleSheet.create({
     fontSize: Metrics.ratio(8),
     fontWeight: '600',
   },
+
+  leftSubTextStyle: {
+    color: Colors.lightMode.white,
+    fontWeight: '400',
+    marginTop: Metrics.ratio(4),
+  },
+
+  rightBtnContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  rightBtnIconStyle: {
+    resizeMode: 'contain',
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
+  },
+
+  centerViewStyle: {
+    width: Metrics.screenWidth * 0.6,
+    justifyContent: 'center',
+  },
+
+  avatarView: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  avatarStyle: {
+    resizeMode: 'contain',
+    height: Metrics.ratio(50),
+    width: Metrics.ratio(50),
+  },
+
+  mainOuterContainer: {
+    backgroundColor: Colors.lightMode.lightPink3,
+    width: Metrics.screenWidth,
+    height: Metrics.screenHeight * 0.12,
+    borderTopLeftRadius: Metrics.ratio(10),
+    borderTopRightRadius: Metrics.ratio(10),
+    marginTop: Metrics.ratio(12),
+    alignItems: 'center',
+  },
+
+  mainInnerContainer: {
+    width: Metrics.screenWidth * 0.9,
+    height: Metrics.screenHeight * 0.07,
+    backgroundColor: Colors.lightMode.white,
+    borderRadius: Metrics.ratio(10),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginTop: Metrics.ratio(10)
+  },
+
+  innerLeftView:{
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  innerLeftIcon:{
+    resizeMode: 'contain',
+    height: Metrics.ratio(30),
+    width: Metrics.ratio(30),
+    marginLeft: Metrics.ratio(10)
+  },
+
+  innerRightView:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: Metrics.screenWidth * 0.15,
+  },
+
+  innerRightIcon:{
+    resizeMode: 'contain',
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20)
+  },
+
+  innerHeading:{
+    color: Colors.lightMode.lightGray6,
+    fontWeight: '400'
+  },
+
+  innerSubHeading:{
+    color: Colors.lightMode.black1,
+    fontWeight: '600'
+  },
+
+  centerView:{
+    width: Metrics.screenWidth * 0.6,
+  }
 });
 
 export default ImageHeader;

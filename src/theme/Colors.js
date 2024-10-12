@@ -82,6 +82,8 @@ const lightMode = {
   lightGray3: '#B0B5B9',
   lightGray4: '#475467',
   lightGray5: '#CBCED1',
+  lightGray6: '#A0A4B0',
+  lightGray7: '#F2F4F7',
   codeColor: 'rgba(169, 169, 169, 0.5)',
   textInputBackgroundColor: '#FFF1EA',
   textInputBorderColor: '#F08323',
