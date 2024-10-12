@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   descriptionContainer:{
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Metrics.ratio(10)
+    marginTop: Metrics.ratio(20)
   },
 
   loaderDescContainer:{
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   },
 
   pointsMainContainer:{
-    marginTop: Metrics.ratio(10)
+    marginTop: Metrics.ratio(20)
   },
 
   submitButtonStyle: {
