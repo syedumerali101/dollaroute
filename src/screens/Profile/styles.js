@@ -148,10 +148,7 @@ export default StyleSheet.create({
     color: Colors.TextSecondary,
     fontWeight: '500',
   },
-  arrowIcon: {
-    width: Metrics.ratio(8),
-    height: Metrics.ratio(8),
-  },
+ 
   logoutButton: {
     backgroundColor: Colors.white,
     height: Metrics.ratio(50),
@@ -191,8 +188,8 @@ export default StyleSheet.create({
     marginLeft: Metrics.ratio(6),
   },
   arrowIcon: {
-    height: Metrics.ratio(20),
-    width: Metrics.ratio(20),
+    height: Metrics.ratio(15),
+    width: Metrics.ratio(15),
     resizeMode: 'contain',
   },
   optionHeading: {
