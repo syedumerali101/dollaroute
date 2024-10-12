@@ -31,6 +31,7 @@ const DealsDetails = ({navigation}) => {
           item={item}
           mainContainerStyle={styles.mainContainerStyle}
           imageBackgroundStyle={styles.imageBackgroundStyle}
+          onPress={() => navigation.navigate('Rewards')}
         />
       </View>
     );

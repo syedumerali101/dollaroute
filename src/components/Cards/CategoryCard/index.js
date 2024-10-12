@@ -11,10 +11,11 @@ import {Colors, Metrics} from '../../../theme';
 
 const CategoryCard = props => {
   const {image, icon, title, points, name} = props?.item;
-  const {mainContainerStyle, imageBackgroundStyle} = props;
+  const {mainContainerStyle, imageBackgroundStyle, onPress} = props;
   return (
     <TouchableOpacity
       activeOpacity={1}
+      onPress={onPress}
       style={[styles.mainContainer, mainContainerStyle]}>
       <ImageBackground
         borderTopLeftRadius={Metrics.ratio(10)}
