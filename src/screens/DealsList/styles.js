@@ -29,6 +29,21 @@ const styles = StyleSheet.create({
   buttonText: {
     textTransform: 'capitalize',
   },
+
+  contentContainerStyle: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: Metrics.ratio(20),
+    paddingHorizontal: Metrics.ratio(10)
+  },
+
+  listStyle:{
+    width: Metrics.screenWidth,
+  },
+
+  dealsCardContainer: {
+    marginBottom: Metrics.ratio(10),
+  },
 });
 
 export default styles;

@@ -61,13 +61,15 @@ const buttons = [
 const DealsList = ({navigation}) => {
   const renderDealItem = ({item}) => {
     return (
-      <DealCard
-        image={item.image}
-        name={item.title}
-        cashback={item.cashback}
-        action={item.action}
-        onPress={() => navigation?.navigate('DealsDetails')}
-      />
+      <View style={styles.dealsCardContainer}>
+        <DealCard
+          image={item.image}
+          name={item.title}
+          cashback={item.cashback}
+          action={item.action}
+          onPress={() => navigation?.navigate('DealsDetails')}
+        />
+      </View>
     );
   };
 
@@ -93,6 +95,8 @@ const DealsList = ({navigation}) => {
         data={deals}
         renderItem={renderDealItem}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.contentContainerStyle}
+        style={styles.listStyle}
       />
     </View>
   );

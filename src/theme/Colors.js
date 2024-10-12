@@ -93,7 +93,8 @@ const lightMode = {
   backgroundTabColor3: '#EEEEDC',
   circleColor1: '#FFDBA7',
   circleColor2: '#D2E0EE',
-  circleColor3: '#CFE2BD'
+  circleColor3: '#CFE2BD',
+  orange: '#FFA831'
 };
 
 const lightModeTextInput = {
