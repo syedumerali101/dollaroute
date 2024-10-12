@@ -16,7 +16,7 @@ import CategoryCard from '../../components/Cards/CategoryCard';
 import SearchTextInput from '../../components/Inputs/SearchTextInput';
 import AddressCard from '../../components/Cards/AddressCard';
 
-const DealsDetails = () => {
+const DealsDetails = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const [activeTab, setActiveTab] = useState(1);
 
@@ -76,6 +76,7 @@ const DealsDetails = () => {
           {addressData()?.map((item, index) => {
             return (
               <AddressCard
+                onPress={() => navigation.navigate('Rewards')}
                 data={item?.details}
                 title={`${item?.from} - ${item?.to}`}
               />

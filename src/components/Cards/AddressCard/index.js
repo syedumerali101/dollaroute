@@ -4,7 +4,7 @@ import Text from '../../Text';
 import {Colors, Metrics} from '../../../theme';
 import Images from '../../../theme/Images';
 
-const AddressCard = ({data, title}) => {
+const AddressCard = ({data, title, onPress}) => {
   return (
     <TouchableOpacity style={styles.mainBtnContainer} activeOpacity={1}>
       <View style={styles.titleView}>
@@ -29,7 +29,7 @@ const AddressCard = ({data, title}) => {
         );
       })}
 
-      <TouchableOpacity style={styles.sendBtnStyle}>
+      <TouchableOpacity onPress={onPress} style={styles.sendBtnStyle}>
         <Image style={styles.sendIconStyle} source={Images.common.send} />
       </TouchableOpacity>
     </TouchableOpacity>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0,
     marginRight: Metrics.ratio(20),
-    marginBottom: Metrics.ratio(10)
+    marginBottom: Metrics.ratio(10),
   },
 
   sendIconStyle: {

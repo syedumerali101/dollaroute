@@ -288,7 +288,6 @@ export const rewardsData = () => [
     points: '4,500 points',
     name: 'Starbucks',
   },
- 
 ];
 
 export const addressData = () => [
@@ -300,21 +299,21 @@ export const addressData = () => [
       {
         id: 1,
         icon: Images.common.locationMarker,
-        title: '1500 Broadway, New Your, NY 10036'
+        title: '1500 Broadway, New Your, NY 10036',
       },
 
       {
         id: 2,
         icon: Images.common.clock,
-        title: '6:00 AM - 10:00 PM'
+        title: '6:00 AM - 10:00 PM',
       },
 
       {
         id: 3,
         icon: Images.common.phone,
-        title: '+92 310 473 471'
+        title: '+92 310 473 471',
       },
-    ]
+    ],
   },
 
   {
@@ -325,22 +324,104 @@ export const addressData = () => [
       {
         id: 1,
         icon: Images.common.locationMarker,
-        title: '1500 Broadway, New Your, NY 10036'
+        title: '1500 Broadway, New Your, NY 10036',
       },
 
       {
         id: 2,
         icon: Images.common.clock,
-        title: '6:00 AM - 10:00 PM'
+        title: '6:00 AM - 10:00 PM',
       },
 
       {
         id: 3,
         icon: Images.common.phone,
-        title: '+92 310 473 471'
+        title: '+92 310 473 471',
       },
-    ]
+    ],
   },
-]
+];
+
+export const termsConditions = {
+  id: 1,
+  heading: 'Terms and Conditions:',
+  data: [
+    {
+      id: 1,
+      title: 'Available to members with a minimum of 3,750 points.',
+    },
+
+    {
+      id: 2,
+      title: 'Redeemable once within 30 days.',
+    },
+
+    {
+      id: 3,
+      title: 'E-voucher valid for 30 days from redemption.',
+    },
+
+    {
+      id: 4,
+      title: 'Complimentary tall-sized coffee of your choice.',
+    },
+
+    {
+      id: 5,
+      title: 'Cannot be combined with other promotions.',
+    },
+
+    {
+      id: 7,
+      title: 'Non-transferable, for member use only.',
+    },
+
+    {
+      id: 8,
+      title: 'E-voucher expires if points are insufficient.',
+    },
+  ],
+};
+
+export const redeemPoints = {
+  id: 1,
+  heading: 'How to Redeem:',
+  data: [
+    {
+      id: 1,
+      title: 'Ensure a minimum of 3,750 points in your account.',
+    },
+
+    {
+      id: 2,
+      title: 'Access the "Rewards" tab in the Starbucks Loyalify app.',
+    },
+
+    {
+      id: 3,
+      title: 'Choose "Get Free 1 Cup Coffee E-Voucher.',
+    },
+
+    {
+      id: 4,
+      title: 'Confirm and redeem 3,750 points for the e-voucher.',
+    },
+
+    {
+      id: 5,
+      title: 'Find it in the "My Voucher" section.',
+    },
+
+    {
+      id: 7,
+      title: 'Present the e-voucher at checkout for your free coffee.',
+    },
+
+    {
+      id: 8,
+      title: 'Indulge in your complimentary tall-sized coffee.',
+    },
+  ],
+};
 
 

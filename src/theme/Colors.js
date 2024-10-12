@@ -66,6 +66,7 @@ const lightMode = {
   lightPink: "#EEE5FF",
   lightPink2: "#FCC5CF",
   lightPink3: '#FFDEE2',
+  lightPink4: '#FDD9DF',
   orange: '#F57C21',
   orange2: '#FFA000',
   orange3: '#EA802D',

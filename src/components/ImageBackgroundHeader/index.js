@@ -9,6 +9,7 @@ import {
 import Images from '../../theme/Images';
 import {Colors, Metrics} from '../../theme';
 import {useNavigation} from '@react-navigation/native';
+import Text from '../Text';
 
 const ImageBackgroundHeader = ({title, image, onPress}) => {
   const navigation = useNavigation();
@@ -27,6 +28,14 @@ const ImageBackgroundHeader = ({title, image, onPress}) => {
         style={styles.btnStyle}>
         <Image style={styles.iconStyle} source={Images.loginScreen.leftArrow} />
       </TouchableOpacity>
+
+      <View style={styles.titleView}>
+        <Text size="eighteen" style={styles.titleText}>
+          {title}
+        </Text>
+      </View>
+
+      <View style={styles.rightViewStyle} />
     </ImageBackground>
   );
 };
@@ -36,8 +45,10 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: Metrics.screenHeight * 0.25,
     width: Metrics.screenWidth,
-    justifyContent: 'center',
-    zIndex: 0
+    zIndex: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: Metrics.ratio(60),
   },
 
   iconStyle: {
@@ -53,8 +64,26 @@ const styles = StyleSheet.create({
     height: Metrics.screenWidth * 0.08,
     borderRadius: Metrics.ratio(20),
     alignItems: 'center',
-    marginBottom: Metrics.ratio(50),
+    // marginBottom: Metrics.ratio(50),
     marginLeft: Metrics.screenWidth * 0.05,
+  },
+
+  rightViewStyle: {
+    justifyContent: 'center',
+    width: Metrics.screenWidth * 0.08,
+    height: Metrics.screenWidth * 0.08,
+    borderRadius: Metrics.ratio(20),
+    alignItems: 'center',
+    marginLeft: Metrics.screenWidth * 0.05,
+  },
+
+  titleView: {
+    alignItems: 'center',
+  },
+
+  titleText: {
+    color: Colors.lightMode.white,
+    fontWeight: '800',
   },
 });
 

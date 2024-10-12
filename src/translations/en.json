@@ -85,6 +85,8 @@
   },
 
   "common": {
-    "reviews": "reviews"
+    "reviews": "reviews",
+    "redeem": "Redeem"
   }
+
 }
