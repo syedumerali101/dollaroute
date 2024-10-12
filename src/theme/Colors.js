@@ -67,6 +67,7 @@ const lightMode = {
   lightPink2: "#FCC5CF",
   lightPink3: '#FFDEE2',
   lightPink4: '#FDD9DF',
+  lightPink5: '#FEECEF',
   orange: '#F57C21',
   orange2: '#FFA000',
   orange3: '#EA802D',
@@ -146,4 +147,5 @@ export default {
   white: "#FFFFFF",
   primaryButtonColor: "#2A378F",
   transparent: "transparent",
+  modalBackground: 'rgba(0,0,0,0.3)'
 };

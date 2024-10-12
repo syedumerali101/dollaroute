@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {ScrollView, StatusBar, View} from 'react-native';
 import styles from './styles';
 import ImageBackgroundHeader from '../../components/ImageBackgroundHeader';
@@ -6,12 +6,22 @@ import Images from '../../theme/Images';
 import Text from '../../components/Text';
 import {redeemPoints, termsConditions} from '../../configs/Constants';
 import SubmitButton from '../../components/Buttons/SubmitButton';
-import en from '../../translations/en.json'
+import en from '../../translations/en.json';
+import Loader from '../../components/Loader';
 
 const Rewards = ({navigation}) => {
   const scrollViewRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
-  const renderPoints = (data) => {
+  const handleRedeemPoints = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  };
+
+  const renderPoints = data => {
     return (
       <View style={styles.pointsMainContainer}>
         <Text size="sixteen" style={styles.headingText}>
@@ -80,6 +90,7 @@ const Rewards = ({navigation}) => {
         <SubmitButton
           title={en.common.redeem}
           style={styles.submitButtonStyle}
+          onPress={handleRedeemPoints}
         />
       </View>
     );
@@ -112,6 +123,7 @@ const Rewards = ({navigation}) => {
           image={Images.dummy.dummyDetailBanner}
         />
         {mainRender()}
+        <Loader loading={loading} />
       </View>
     </>
   );
