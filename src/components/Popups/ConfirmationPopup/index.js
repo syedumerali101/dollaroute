@@ -9,7 +9,7 @@ import Images from '../../../theme/Images';
 import SubmitButton from '../../Buttons/SubmitButton';
 
 const ConfirmationPopup = props => {
-  const {loading, width, height} = props;
+  const {loading, width, height, onNo, onYes} = props;
   return (
     <Modal
       style={{margin: 0}}
@@ -43,12 +43,14 @@ const ConfirmationPopup = props => {
             title={'View E-Voucher'}
             style={styles.firstBtnStyle}
             textStyle={styles.firstBtnTextStyle}
+            onPress={onYes}
           />
 
           <SubmitButton
             title={'Go to Home'}
             style={styles.secondBtnStyle}
             textStyle={styles.textStyle}
+            onPress={onNo}
           />
         </View>
       </View>

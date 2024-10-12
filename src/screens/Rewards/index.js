@@ -9,18 +9,33 @@ import SubmitButton from '../../components/Buttons/SubmitButton';
 import en from '../../translations/en.json';
 import Loader from '../../components/Loader';
 import ConfirmationPopup from '../../components/Popups/ConfirmationPopup';
+import { navigateAndSimpleReset } from '../../utils/navigation';
 
 const Rewards = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [voucherShowing, setVoucherShowing] = useState(false);
 
   const handleRedeemPoints = () => {
     setLoading(true);
 
     setTimeout(() => {
       setLoading(false);
+      setVoucherShowing(true);
     }, 5000);
   };
+
+  const handleVoucher = () => {
+    setVoucherShowing(false);
+    setLoading(false);
+  };
+
+  const handleNavigateBack = () => {
+    setVoucherShowing(false);
+    setLoading(false);
+    navigateAndSimpleReset('Home', 0);
+  };
+
 
   const renderPoints = data => {
     return (
@@ -126,7 +141,7 @@ const Rewards = ({navigation}) => {
         {mainRender()}
         <Loader loading={loading} />
 
-        <ConfirmationPopup />
+        <ConfirmationPopup loading={voucherShowing} onYes={handleVoucher} onNo={handleNavigateBack} />
       </View>
     </>
   );
