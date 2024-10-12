@@ -8,6 +8,7 @@ import {redeemPoints, termsConditions} from '../../configs/Constants';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import en from '../../translations/en.json';
 import Loader from '../../components/Loader';
+import ConfirmationPopup from '../../components/Popups/ConfirmationPopup';
 
 const Rewards = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -124,6 +125,8 @@ const Rewards = ({navigation}) => {
         />
         {mainRender()}
         <Loader loading={loading} />
+
+        <ConfirmationPopup />
       </View>
     </>
   );

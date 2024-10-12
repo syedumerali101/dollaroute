@@ -11,9 +11,7 @@ import {
 } from 'react-native';
 import {Colors, Metrics} from '../../theme';
 import Text from '../Text';
-import {
-  MaterialIndicator,
-} from 'react-native-indicators';
+import {MaterialIndicator} from 'react-native-indicators';
 
 const Loader = props => {
   const {loading, width, height} = props;

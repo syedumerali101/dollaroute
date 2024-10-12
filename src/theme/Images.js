@@ -27,7 +27,7 @@ const common = {
   phone: require('../assets/phone.png'),
   locationMarker: require('../assets/locationMarker.png'),
   send: require('../assets/send.png'),
-  
+  redeemIcon: require('../assets/redeemIcon.png'),
 };
 
 const welcomeScreen = {
