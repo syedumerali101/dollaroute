@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
 
   loaderSpinngerView: {
     backgroundColor: Colors.lightMode.white,
-    width: Metrics.ratio(35),
-    height: Metrics.ratio(35),
+    width: Metrics.ratio(40),
+    height: Metrics.ratio(40),
     borderWidth: Metrics.ratio(5),
     borderRadius: Metrics.ratio(20),
     borderColor: Colors.lightMode.lightPink4,
