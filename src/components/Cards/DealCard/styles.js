@@ -42,21 +42,17 @@ const styles = StyleSheet.create({
   },
   calendarRow: {
     flexDirection: 'row',
-    alignItems: 'center',
   },
   typeContainer: {
     backgroundColor: '#FFF8E6',
     borderRadius: Metrics.screenWidth * 0.04,
     paddingVertical: Metrics.screenWidth * 0.012,
     paddingHorizontal: Metrics.screenWidth * 0.03,
-    marginBottom: Metrics.ratio(30)
+    marginBottom: Metrics.ratio(25)
   },
   cashbackText: {
     color: Colors.TextSecondary,
     fontWeight: '500',
-    marginTop: Metrics.ratio(1.5),
-    marginBottom: Metrics.ratio(1.5),
-
   },
   expiry: {
     marginLeft: Metrics.screenWidth * 0.02,
@@ -71,7 +67,8 @@ const styles = StyleSheet.create({
     bottom: Metrics.ratio(8)
   },
   thirdContainer: {
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   name: {
     textTransform: 'capitalize',
@@ -93,8 +90,8 @@ const styles = StyleSheet.create({
   },
 
   leftView:{
-    justifyContent: 'center',
-    marginLeft: Metrics.ratio(5)
+    marginLeft: Metrics.ratio(5),
+    marginBottom: Metrics.ratio(5)
   },
 
   mainRowContainer: {
@@ -102,7 +99,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: Metrics.ratio(12),
     width: Metrics.screenWidth * 0.65,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 
   typeText:{

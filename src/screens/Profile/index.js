@@ -16,7 +16,7 @@ import {navigate} from '../../utils/navigation';
 import ImageHeader from '../../components/ImageHeader';
 import {GeneralList, SupportList} from '../../configs/Constants';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
   const scrollViewRef = useRef(null);
 
   const renderOptionsList = (heading, list) => {
@@ -27,7 +27,10 @@ const ProfileScreen = () => {
         </Text>
         <View>
           {list?.map((item, index) => (
-            <TouchableOpacity key={index} style={styles.optionItem}>
+            <TouchableOpacity
+              onPress={() => navigation?.navigate(item?.route)}
+              key={index}
+              style={styles.optionItem}>
               <Text style={styles.optionText} size="fourteen">
                 {item.title}
               </Text>

@@ -222,8 +222,8 @@ const styles = StyleSheet.create({
 
   scanIconStyle: {
     resizeMode: 'contain',
-    height: Metrics.ratio(18),
-    width: Metrics.ratio(18),
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
   },
 
   notificationsBtn: {
@@ -233,8 +233,8 @@ const styles = StyleSheet.create({
 
   notificationIcon: {
     resizeMode: 'contain',
-    height: Metrics.ratio(18),
-    width: Metrics.ratio(18),
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
   },
 
   notificationCountView: {
@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: Metrics.ratio(10)
+    marginTop: Metrics.ratio(15)
   },
 
   innerLeftView:{

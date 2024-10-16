@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textTransform: 'capitalize',
+    color: Colors.lightMode.grey10,
   },
 
   contentContainerStyle: {

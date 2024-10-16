@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
 
   iconStyle: {
     resizeMode: 'contain',
-    height: Metrics.ratio(15),
-    width: Metrics.ratio(15),
+    height: Metrics.ratio(20),
+    width: Metrics.ratio(20),
   },
 
   detailsView: {

@@ -77,19 +77,16 @@ const DealsList = ({navigation}) => {
     return buttons.map(val => {
       return (
         <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-          <Text style={styles.buttonText}>{val.title}</Text>
+          <Text size="twelve"  style={styles.buttonText}>{val.title}</Text>
         </TouchableOpacity>
       );
     });
   };
 
-  const renderSearchBox = () => {
-    return <SearchTextInput placeHolder={en.categoriesScreen.search} />;
-  };
 
   return (
     <View style={styles.container}>
-      {renderSearchBox()}
+    <SearchTextInput placeHolder={en.categoriesScreen.search} />
       <View style={styles.buttonsRow}>{renderButtons()}</View>
       <FlatList
         data={deals}

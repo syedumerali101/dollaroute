@@ -8,6 +8,7 @@ import StoreStack from '../StoreStack';
 import CategoriesStack from '../CategoriesStack';
 import DealStack from '../DealStack';
 import ProfileScreen from '../../screens/Profile';
+import ProfileStack from '../ProfileStack';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -31,10 +32,7 @@ const TabNavigator = props => {
       <Tab.Screen name="Stores" component={StoreStack} />
       <Tab.Screen name="Deals" component={DealStack} />
       <Tab.Screen name="Categories" component={CategoriesStack} />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-      />
+      <Tab.Screen name="Profile" component={ProfileStack} />
     </Tab.Navigator>
   );
 };

@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     right: 0,
-    marginRight: Metrics.ratio(20),
+    marginRight: Metrics.ratio(12),
     marginBottom: Metrics.ratio(10),
   },
 

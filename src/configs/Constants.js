@@ -428,31 +428,30 @@ export const detailsData = () => [
   {
     id: 1,
     title: 'Mechant',
-    text: 'Starbucks'
+    text: 'Starbucks',
   },
 
   {
     id: 2,
     title: 'Points Used',
-    text: '3,750 pts'
+    text: '3,750 pts',
   },
   {
     id: 3,
     title: 'Voucher Code',
-    text: 'VCO31541ST'
+    text: 'VCO31541ST',
   },
 
   {
     id: 4,
     title: 'Voucher Code',
-    text: 'Dec 31, 2024'
+    text: 'Dec 31, 2024',
   },
-
 ];
 
 export const GeneralList = () => [
   {title: 'Account Information', route: 'AccountInfo'},
-  {title: 'Cashback Withdrawal', route: 'CashbackWithdraw'},
+  {title: 'Cashback Withdrawal', route: 'CashBack'},
   {title: 'Referral', route: 'Referral'},
   {title: 'Settings', route: 'Settings'},
 ];
@@ -462,4 +461,43 @@ export const SupportList = () => [
   {title: 'Help', route: 'Help'},
 ];
 
+export const cashbackData = () => [
+  {
+    id: 1,
+    date: 'Mon 20 Oct',
+    data: [
+      {
+        id: 1,
+        name: 'Starbucks',
+        image: Images.dummy.starbucks,
+        type: 'Coffee house',
+        price: '$10.99',
+        cashback: '+ $1.50 cashback',
+      },
 
+      {
+        id: 2,
+        name: 'Levi’s',
+        image: Images.dummy.starbucks,
+        type: 'Clothing',
+        price: '$10.99',
+        cashback: '+ $1.50 cashback',
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    date: 'Mon 20 Oct',
+    data: [
+      {
+        id: 1,
+        name: 'McDonald',
+        image: Images.dummy.mcdonalds,
+        type: 'Coffee house',
+        price: '$10.99',
+        cashback: '+ $1.50 cashback',
+      },
+    ],
+  },
+];

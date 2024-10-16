@@ -140,7 +140,7 @@ export default StyleSheet.create({
     height: Metrics.ratio(40),
     width: Metrics.screenWidth * 0.9,
     borderRadius: Metrics.ratio(0.2),
-    elevation: 1,
+    // elevation: 1,
     alignItems: 'center',
     
   },
@@ -158,7 +158,7 @@ export default StyleSheet.create({
     height: Metrics.ratio(40),
     width: Metrics.screenWidth * 0.9,
     borderRadius: Metrics.ratio(0.2),
-    elevation: 1,
+    // elevation: 1,
   },
   logoutText: {
     color: Colors.lightModeTextInput.errorColor,

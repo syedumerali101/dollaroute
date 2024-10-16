@@ -42,7 +42,7 @@ const DealCard = ({image, name, cashback, action, onPress}) => {
               </Text>
             </View>
 
-            <Text size="ten" style={styles.activateText}>
+            <Text size="xxxSmall" style={styles.activateText}>
               {action}
             </Text>
           </View>
