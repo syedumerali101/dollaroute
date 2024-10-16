@@ -91,7 +91,7 @@ const CashBack = () => {
   };
 
   return (
-    <SafeAreaWrapper>
+    <View style={styles.mainContainer}>
       <Header title={en.navTitles.cashback} />
       {mainRender()}
       <SubmitButton
@@ -99,7 +99,7 @@ const CashBack = () => {
         style={styles.submitButtonStyle}
         textStyle={styles.submitBtnTextStyle}
       />
-    </SafeAreaWrapper>
+    </View>
   );
 };
 

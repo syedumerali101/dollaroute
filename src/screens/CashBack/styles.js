@@ -117,14 +117,21 @@ const styles = StyleSheet.create({
 
   submitButtonStyle: {
     width: Metrics.screenWidth * 0.9,
-    marginTop: Metrics.ratio(30),
     backgroundColor: Colors.lightMode.lightPink2,
+    marginBottom: Metrics.ratio(20)
   },
 
   submitBtnTextStyle: {
     color: Colors.lightMode.pink,
  
   },
+
+  mainContainer:{
+    flex: 1,
+    backgroundColor: Colors.lightMode.white,
+    alignItems: 'center',
+    paddingTop: Metrics.screenHeight * 0.05,
+  }
 });
 
 export default styles;
