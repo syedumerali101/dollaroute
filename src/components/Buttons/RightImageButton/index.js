@@ -9,6 +9,7 @@ const RightImageButton = props => {
 
   return (
     <TouchableOpacity
+    activeOpacity={1}
       onPress={() => onPress(item?.route)}
       key={index}
       style={styles.optionItem}>

@@ -5,7 +5,14 @@ import Images from '../../theme/Images';
 import {useNavigation} from '@react-navigation/native';
 import Text from '../Text';
 
-const Header = ({title, rightView, headerContainer, titleTextStyle, leftIconStyle}) => {
+const Header = ({
+  title,
+  rightView,
+  headerContainer,
+  titleTextStyle,
+  leftIconStyle,
+  rightIcon,
+}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
@@ -25,9 +32,11 @@ const Header = ({title, rightView, headerContainer, titleTextStyle, leftIconStyl
         </Text>
       </View>
 
-      <View style={styles.rightView}>
-        {rightView ? rightView : null}
-      </View>
+      <TouchableOpacity activeOpacity={1} style={styles.rightView}>
+        {rightIcon ? (
+          <Image source={rightIcon} style={styles.rightIconStyle} />
+        ) : null}
+      </TouchableOpacity>
     </TouchableOpacity>
   );
 };
@@ -60,7 +69,7 @@ const styles = StyleSheet.create({
   centerText: {
     color: Colors.lightMode.black1,
     // fontSize: Metrics.ratio(12),
-    fontWeight: '800',
+    fontWeight: '600',
   },
 
   rightView: {
@@ -72,6 +81,12 @@ const styles = StyleSheet.create({
   rightIconStyle: {
     resizeMode: 'contain',
     height: Metrics.ratio(12),
+  },
+
+  rightIconStyle: {
+    resizeMode: 'contain',
+    height: Metrics.ratio(17),
+    width: Metrics.ratio(17),
   },
 });
 

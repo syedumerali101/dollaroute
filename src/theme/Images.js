@@ -31,8 +31,9 @@ const common = {
   download: require('../assets/download.png'),
   dollars: require('../assets/dollars.png'),
   tick: require('../assets/tick.png'),
+  cardScan: require('../assets/cardScan.png'),
+  plus: require('../assets/plus.png'),
 
-  
 };
 
 const welcomeScreen = {

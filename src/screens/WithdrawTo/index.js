@@ -8,6 +8,7 @@ import RowButton from '../../components/Buttons/RowButton';
 import {paymentMethods} from '../../configs/Constants';
 import SubmitButton from '../../components/Buttons/SubmitButton';
 import PaymentButton from '../../components/Buttons/PaymentButton';
+import Images from '../../theme/Images';
 
 const WithdrawTo = ({navigation}) => {
   const scrollViewRef = useRef(null);
@@ -42,15 +43,17 @@ const WithdrawTo = ({navigation}) => {
 
   return (
     <View style={styles.mainContainer}>
-      <Header title={en.navTitles.withDrawTo} />
+      <Header title={en.navTitles.withDrawTo} rightIcon={Images.common.plus} />
       {mainRender()}
       <SubmitButton
         title={en.common.continue}
         style={styles.submitButtonStyle}
         textStyle={styles.submitBtnTextStyle}
-        onPress={() => navigation.navigate('ReviewSummary', {
-          selectedPayment: selectedPayment
-        })}
+        onPress={() =>
+          navigation.navigate('ReviewSummary', {
+            selectedPayment: selectedPayment,
+          })
+        }
       />
     </View>
   );

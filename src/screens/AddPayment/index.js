@@ -9,6 +9,7 @@ import TextButton from '../../components/Buttons/TextButton';
 import DescTextButton from '../../components/Buttons/DescTextButton';
 import SafeAreaWrapper from '../../components/Wrappers/SafeAreaWrapper';
 import {navigate} from '../../utils/navigation';
+import Images from '../../theme/Images';
 
 const AddPayment = ({navigation}) => {
   const [email, setEmail] = useState(null);
@@ -85,7 +86,10 @@ const AddPayment = ({navigation}) => {
   };
   return (
     <View style={styles.mainContainer}>
-      <Header title={en.navTitles.addPayment} />
+      <Header
+        title={en.navTitles.addPayment}
+        rightIcon={Images.common.cardScan}
+      />
       <View style={styles.mainRender}>{renderInputFields()}</View>
     </View>
   );

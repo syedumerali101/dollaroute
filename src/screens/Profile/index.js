@@ -47,6 +47,7 @@ const ProfileScreen = ({navigation}) => {
   const renderLogoutButton = () => {
     return (
       <TouchableOpacity
+      activeOpacity={1}
         style={styles.logoutButton}
         onPress={() => navigate('AuthStack')}>
         <Text style={styles.logoutText} size="fourteen">

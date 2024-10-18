@@ -62,9 +62,9 @@ const VoucherDetails = () => {
       <Header
         headerContainer={styles.headerContainer}
         title="Voucher"
-        rightView={renderRightBtn()}
         titleTextStyle={styles.titleTextStyle}
         leftIconStyle={styles.leftIconStyle}
+        rightIcon={Images.common.download}
       />
       {mainRender()}
     </View>
