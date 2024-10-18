@@ -3,9 +3,9 @@ import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
 import Text from '../../Text';
 
-const IconButton = ({title, icon, onPress}) => {
+const IconButton = ({title, icon, onPress, mainBtnContainer}) => {
   return (
-    <TouchableOpacity activeOpacity={1} style={styles.mainBtnContainer}>
+    <TouchableOpacity activeOpacity={1} style={[styles.mainBtnContainer, mainBtnContainer]}>
       <View style={styles.iconView}>
         <Image source={icon} style={styles.iconStyle} />
       </View>

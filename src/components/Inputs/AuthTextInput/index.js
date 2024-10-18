@@ -26,7 +26,7 @@ const AuthTextInput = props => {
         ref={inputRef}
         value={props.value}
         onChangeText={props.onChangeText}
-        style={styles.textInputStyle}
+        style={[styles.textInputStyle, props?.textInputStyle]}
         placeholder={props.placeHolder}
         placeholderTextColor={Colors.lightMode.grey7}
         secureTextEntry={props.type && showEye ? true : false}

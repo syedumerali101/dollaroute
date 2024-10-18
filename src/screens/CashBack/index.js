@@ -9,8 +9,9 @@ import Images from '../../theme/Images';
 import RowButton from '../../components/Buttons/RowButton';
 import {cashbackData} from '../../configs/Constants';
 import SubmitButton from '../../components/Buttons/SubmitButton';
+import CashbackCard from '../../components/Cards/CashbackCard';
 
-const CashBack = () => {
+const CashBack = ({navigation}) => {
   const scrollViewRef = useRef(null);
   const mainRender = () => {
     return (
@@ -50,40 +51,18 @@ const CashBack = () => {
           </View>
         </View>
 
-        <RowButton title="History of bonuses" buttonTitle={'See all'} />
+        <RowButton
+          title="History of bonuses"
+          buttonTitle={'See all'}
+          style={styles.rowBtnContainer}
+        />
 
         {cashbackData()?.map((item, index) => {
           return (
-            <View style={styles.innerRowContainer}>
-              <Text size="fourteen" style={styles.dateText}>
-                {item?.date}
-              </Text>
-              {item?.data?.map((dataItem, dataIndex) => (
-                <View style={styles.itemContainer}>
-                  <View style={styles.itemImageView}>
-                    <Image style={styles.imageStyle} source={dataItem?.image} />
-                  </View>
-
-                  <View style={styles.itemNameContainer}>
-                    <Text size="fourteen" style={styles.itemNameStyle}>
-                      {dataItem?.name}
-                    </Text>
-                    <Text size="ten" style={styles.itemTypeStyle}>
-                      {dataItem?.type}
-                    </Text>
-                  </View>
-
-                  <View style={styles.itemPriceContainer}>
-                    <Text size="fourteen" style={styles.priceStyle}>
-                      {dataItem?.price}
-                    </Text>
-                    <Text size="ten" style={styles.cashbackStyle}>
-                      {dataItem?.cashback}
-                    </Text>
-                  </View>
-                </View>
-              ))}
-            </View>
+            <CashbackCard
+              item={item}
+              onPress={() => navigation.navigate('Transaction')}
+            />
           );
         })}
       </ScrollView>
@@ -98,6 +77,7 @@ const CashBack = () => {
         title={en.cashback.withDraw}
         style={styles.submitButtonStyle}
         textStyle={styles.submitBtnTextStyle}
+        onPress={() => navigation.navigate('WithdrawCashback')}
       />
     </View>
   );

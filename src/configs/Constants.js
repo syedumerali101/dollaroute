@@ -501,3 +501,58 @@ export const cashbackData = () => [
     ],
   },
 ];
+
+export const transactionData = () => [
+  {
+    id: 1,
+    date: 'Today',
+    data: [
+      {
+        id: 1,
+        name: 'Nina Gvasalia',
+        image: Images.common.dollars,
+        type: 'Income',
+        price: '+ $10.99',
+        cashback: '20:37',
+      },
+
+      {
+        id: 2,
+        name: 'Levi’s',
+        image: Images.common.dollars,
+        type: 'Outcome',
+        price: '$10.99',
+        cashback: '20:37',
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    date: 'Sat 19 Oct',
+    data: [
+      {
+        id: 1,
+        name: 'Cafe Paul',
+        image: Images.common.dollars,
+        type: 'Outcome',
+        price: '$10.99',
+        cashback: '20:37',
+      },
+    ],
+  },
+];
+
+export const paymentMethods = () => [
+  {
+    id: 1,
+    title: 'Apple Pay',
+    icon: Images.dummy.apple,
+  },
+
+  {
+    id: 2,
+    title: 'Google',
+    icon: Images.signupScreen.google,
+  },
+];

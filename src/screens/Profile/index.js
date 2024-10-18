@@ -15,11 +15,17 @@ import {Colors, Metrics} from '../../theme';
 import {navigate} from '../../utils/navigation';
 import ImageHeader from '../../components/ImageHeader';
 import {GeneralList, SupportList} from '../../configs/Constants';
+import RightImageButton from '../../components/Buttons/RightImageButton';
 
 const ProfileScreen = ({navigation}) => {
   const scrollViewRef = useRef(null);
 
   const renderOptionsList = (heading, list) => {
+    const handleOnPress = route => {
+      if (route) {
+        navigation?.navigate(route);
+      }
+    };
     return (
       <View style={styles.innerPointRow}>
         <Text size="fourteen" style={styles.optionHeading}>
@@ -27,18 +33,11 @@ const ProfileScreen = ({navigation}) => {
         </Text>
         <View>
           {list?.map((item, index) => (
-            <TouchableOpacity
-              onPress={() => navigation?.navigate(item?.route)}
-              key={index}
-              style={styles.optionItem}>
-              <Text style={styles.optionText} size="fourteen">
-                {item.title}
-              </Text>
-              <Image
-                source={Images.common.rightArrow}
-                style={styles.arrowIcon}
-              />
-            </TouchableOpacity>
+            <RightImageButton
+              index={index}
+              item={item}
+              onPress={route => handleOnPress(route)}
+            />
           ))}
         </View>
       </View>

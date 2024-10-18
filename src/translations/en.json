@@ -6,7 +6,12 @@
     "verification": "Verification",
     "forgotPassword": "Forgot Password",
     "resetPassword": "Reset Password",
-    "cashback": "Cashback"
+    "cashback": "Cashback",
+    "transaction": "Transaction",
+    "WithdrawCashback": "Withdraw Cashback",
+    "addPayment": "Add New Payment",
+    "withDraw": "Withdraw",
+    "withDrawTo": "Withdraw To"
   },
   "welcomeScreens": {
     "welcomeTitle1": "Earn Cashback on Every Purchase",
@@ -87,11 +92,25 @@
 
   "common": {
     "reviews": "reviews",
-    "redeem": "Redeem"
+    "redeem": "Redeem",
+    "save": "save",
+    "continue": "Continue"
   },
 
   "cashback":{
     "withDraw": "Withdraw"
+  },
+
+  "addPayment":{
+    "cardNumber": "Card Number",
+    "accountHolderName": "Account Holder Name",
+    "expiryDate": "Expiry Date",
+    "cvv": "CVV"
+  },
+
+  "withDraw":{
+    "enterAmount": "Enter amount for Withdraw ",
+    "availableAmount": "Available amount: "
   }
 
 }
