@@ -7,6 +7,7 @@ import WithdrawCashback from '../screens/WithdrawCashback';
 import AddPayment from '../screens/AddPayment';
 import Withdraw from '../screens/Withdraw';
 import WithdrawTo from '../screens/WithdrawTo';
+import ReviewSummary from '../screens/ReviewSummary';
 
 function ProfileStack() {
   const Stack = createStackNavigator();
@@ -37,15 +38,20 @@ function ProfileStack() {
         name="AddPayment"
         component={AddPayment}
       />
-       {/* <Stack.Screen
+      {/* <Stack.Screen
         options={{headerShown: false}}
         name="Withdraw"
         component={Withdraw}
       /> */}
-         <Stack.Screen
+      <Stack.Screen
         options={{headerShown: false}}
         name="WithdrawTo"
         component={WithdrawTo}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ReviewSummary"
+        component={ReviewSummary}
       />
     </Stack.Navigator>
   );

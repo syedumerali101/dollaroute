@@ -97,7 +97,8 @@ const lightMode = {
   circleColor1: '#FFDBA7',
   circleColor2: '#D2E0EE',
   circleColor3: '#CFE2BD',
-  orange: '#FFA831'
+  orange: '#FFA831',
+  separatorColor: '#F3F3F3'
 };
 
 const lightModeTextInput = {

@@ -9,7 +9,8 @@ import Images from '../../../theme/Images';
 import SubmitButton from '../../Buttons/SubmitButton';
 
 const ConfirmationPopup = props => {
-  const {loading, width, height, onNo, onYes} = props;
+  const {loading, width, height, onNo, onYes, title, description, hideYesBtn, mainWhiteContainer, secondBtnStyle} =
+    props;
   return (
     <Modal
       style={{margin: 0}}
@@ -25,30 +26,33 @@ const ConfirmationPopup = props => {
             height,
           },
         ]}>
-        <View style={styles.loaderView}>
+        <View style={[styles.loaderView, mainWhiteContainer]}>
           <Image
             style={styles.redeemIconStyle}
             source={Images.common.redeemIcon}
           />
 
           <Text size="eighteen" style={styles.titleText}>
-            Yaay! Your Voucher is Ready!
+            {title ? title : 'Yaay! Your Voucher is Ready!'}
           </Text>
           <Text size="fourteen" style={styles.descStyle}>
-            Time to treat yourself! Flash E- Voucher at the and redeem your
-            reward.
+            {description
+              ? description
+              : 'Time to treat yourself! Flash E- Voucher at the and redeem your reward.'}
           </Text>
 
-          <SubmitButton
-            title={'View E-Voucher'}
-            style={styles.firstBtnStyle}
-            textStyle={styles.firstBtnTextStyle}
-            onPress={onYes}
-          />
+          {hideYesBtn ? null : (
+            <SubmitButton
+              title={'View E-Voucher'}
+              style={styles.firstBtnStyle}
+              textStyle={styles.firstBtnTextStyle}
+              onPress={onYes}
+            />
+          )}
 
           <SubmitButton
             title={'Go to Home'}
-            style={styles.secondBtnStyle}
+            style={[styles.secondBtnStyle, secondBtnStyle]}
             textStyle={styles.textStyle}
             onPress={onNo}
           />
@@ -87,21 +91,20 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: Metrics.ratio(90),
     width: Metrics.ratio(90),
-    marginTop: Metrics.ratio(5)
+    marginTop: Metrics.ratio(5),
   },
 
   firstBtnStyle: {
     width: Metrics.screenWidth * 0.6,
     height: Metrics.screenHeight * 0.05,
-    marginTop: Metrics.ratio(30)
+    marginTop: Metrics.ratio(30),
   },
 
   secondBtnStyle: {
     width: Metrics.screenWidth * 0.6,
     height: Metrics.screenHeight * 0.05,
     backgroundColor: Colors.lightMode.lightPink2,
-    marginTop: Metrics.ratio(15)
-
+    marginTop: Metrics.ratio(15),
   },
 
   textStyle: {
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: Colors.lightMode.black5,
     fontWeight: '600',
-    marginTop: Metrics.ratio(10)
+    marginTop: Metrics.ratio(10),
   },
 
   descStyle: {
@@ -125,7 +128,6 @@ const styles = StyleSheet.create({
     color: Colors.lightMode.black6,
     fontWeight: '400',
     width: Metrics.screenWidth * 0.6,
-    marginTop: Metrics.ratio(20)
-
+    marginTop: Metrics.ratio(20),
   },
 });

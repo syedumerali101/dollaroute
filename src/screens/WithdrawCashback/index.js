@@ -15,6 +15,7 @@ const WithdrawCashback = ({navigation}) => {
 
   const handleSelectionPayment = paymentMethod => {
     setSelectedPayment(paymentMethod);
+    navigation.navigate('Withdraw')
   };
   const mainRender = () => {
     return (
@@ -36,7 +37,7 @@ const WithdrawCashback = ({navigation}) => {
             title={en.cashback.withDraw}
             style={styles.submitButtonStyle}
             textStyle={styles.submitBtnTextStyle}
-            onPress={() => navigation.navigate('Withdraw')}
+            onPress={() => navigation.navigate('WithdrawTo')}
           />
         </View>
 
@@ -50,7 +51,6 @@ const WithdrawCashback = ({navigation}) => {
         {paymentMethods()?.map((item, index) => {
           return (
             <PaymentButton
-              disabled={true}
               id={item?.id}
               title={item?.title}
               icon={item?.icon}

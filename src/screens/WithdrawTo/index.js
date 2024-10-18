@@ -48,7 +48,9 @@ const WithdrawTo = ({navigation}) => {
         title={en.common.continue}
         style={styles.submitButtonStyle}
         textStyle={styles.submitBtnTextStyle}
-        onPress={() => navigation.navigate('Withdraw')}
+        onPress={() => navigation.navigate('ReviewSummary', {
+          selectedPayment: selectedPayment
+        })}
       />
     </View>
   );

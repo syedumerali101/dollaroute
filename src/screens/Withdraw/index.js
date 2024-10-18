@@ -25,7 +25,8 @@ const Withdraw = ({navigation}) => {
   };
 
   const onSubmit = () => {
-    navigation.navigate('WithdrawTo');
+    // navigation.navigate('WithdrawTo');
+    navigation.goBack()
   };
 
   const renderInputFields = () => {

@@ -11,7 +11,8 @@
     "WithdrawCashback": "Withdraw Cashback",
     "addPayment": "Add New Payment",
     "withDraw": "Withdraw",
-    "withDrawTo": "Withdraw To"
+    "withDrawTo": "Withdraw To",
+    "reviewSummary": "Review Summary"
   },
   "welcomeScreens": {
     "welcomeTitle1": "Earn Cashback on Every Purchase",
