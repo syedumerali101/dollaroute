@@ -9,6 +9,7 @@ import Withdraw from '../screens/Withdraw';
 import WithdrawTo from '../screens/WithdrawTo';
 import ReviewSummary from '../screens/ReviewSummary';
 import InviteFriends from '../screens/InviteFriends';
+import Settings from '../screens/Settings';
 
 function ProfileStack() {
   const Stack = createStackNavigator();
@@ -58,6 +59,12 @@ function ProfileStack() {
         options={{headerShown: false}}
         name="InviteFriends"
         component={InviteFriends}
+      />
+
+<Stack.Screen
+        options={{headerShown: false}}
+        name="Settings"
+        component={Settings}
       />
     </Stack.Navigator>
   );
