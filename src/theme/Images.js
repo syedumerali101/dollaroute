@@ -29,7 +29,9 @@ const common = {
   send: require('../assets/send.png'),
   redeemIcon: require('../assets/redeemIcon.png'),
   download: require('../assets/download.png'),
-  dollars: require('../assets/dollars.png')
+  dollars: require('../assets/dollars.png'),
+  tick: require('../assets/tick.png'),
+
   
 };
 

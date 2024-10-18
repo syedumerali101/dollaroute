@@ -41,7 +41,19 @@ const styles = StyleSheet.create({
 
   textInputStyle:{
     width: Metrics.screenWidth * 0.35,
-  }
+  },
+
+  mainScrollViewStyle: {
+    flex: 1,
+    backgroundColor: Colors.lightMode.white,
+  },
+
+  mainContainer:{
+    flex: 1,
+    backgroundColor: Colors.lightMode.white,
+    alignItems: 'center',
+    paddingTop: Metrics.screenHeight * 0.05,
+  },
 });
 
 export default styles;

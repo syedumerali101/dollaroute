@@ -1,5 +1,12 @@
 import React, {useRef, useState} from 'react';
-import {Text, View, ScrollView, SafeAreaView, TextInput} from 'react-native';
+import {
+  Text,
+  View,
+  ScrollView,
+  SafeAreaView,
+  TextInput,
+  StatusBar,
+} from 'react-native';
 import AuthTextInput from '../../components/Inputs/AuthTextInput';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -43,6 +50,25 @@ const Withdraw = ({navigation}) => {
           {en.withDraw.availableAmount}
           {totalBalance}
         </Text>
+      </View>
+    );
+  };
+  return (
+    <>
+      <StatusBar
+        backgroundColor={'transparent'}
+        barStyle={'dark-content'}
+        translucent={true}
+      />
+
+      <View style={styles.mainContainer}>
+        <Header
+          headerContainer={styles.headerContainer}
+          title={en.navTitles.withDraw}
+          titleTextStyle={styles.titleTextStyle}
+          leftIconStyle={styles.leftIconStyle}
+        />
+        {renderInputFields()}
         <SubmitButton
           title={en.common.continue}
           style={styles.submitButtonStyle}
@@ -50,17 +76,7 @@ const Withdraw = ({navigation}) => {
           onPress={onSubmit}
         />
       </View>
-    );
-  };
-  return (
-    <SafeAreaView style={styles.mainContainer}>
-      <Header
-        title={en.navTitles.withDraw}
-        titleTextStyle={styles.titleTextStyle}
-        leftIconStyle={styles.leftIconStyle}
-      />
-      {renderInputFields()}
-    </SafeAreaView>
+    </>
   );
 };
 

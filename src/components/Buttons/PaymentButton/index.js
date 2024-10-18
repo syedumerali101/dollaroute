@@ -49,7 +49,7 @@ const PaymentButton = ({
                   : Colors.lightMode.grey2,
               },
             ]}
-            source={Images.common.clock}
+            source={Images.common.tick}
           />
         </View>
       )}
@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
 
   tickStyle: {
     resizeMode: 'contain',
-    height: Metrics.ratio(20),
-    width: Metrics.ratio(20),
+    height: Metrics.ratio(12),
+    width: Metrics.ratio(12),
   },
 });
 

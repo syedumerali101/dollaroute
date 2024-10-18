@@ -47,6 +47,11 @@ const styles = StyleSheet.create({
     marginTop: Metrics.ratio(5),
   },
 
+  headingText:{
+    color: Colors.lightMode.grey9,
+    fontWeight: '400'
+  },
+
   mainContainer: {
     flex: 1,
     backgroundColor: Colors.lightMode.white,

@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import AuthStack from '../AuthStack';
 import TabNavigator from '../TabNavigator';
+import Withdraw from '../../screens/Withdraw';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,12 @@ const MainNavigator = () => {
           name="TabNavigator"
           component={TabNavigator}
           options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Withdraw"
+          component={Withdraw}
         />
       </>
     </Stack.Navigator>

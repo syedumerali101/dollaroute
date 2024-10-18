@@ -29,7 +29,7 @@ const AddPayment = ({navigation}) => {
   };
 
   const onSubmit = () => {
-    navigation.goBack()
+    navigation.goBack();
   };
 
   const renderInputFields = () => {
@@ -84,10 +84,10 @@ const AddPayment = ({navigation}) => {
     );
   };
   return (
-    <SafeAreaWrapper>
+    <View style={styles.mainContainer}>
       <Header title={en.navTitles.addPayment} />
       <View style={styles.mainRender}>{renderInputFields()}</View>
-    </SafeAreaWrapper>
+    </View>
   );
 };
 

@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
     marginTop: Metrics.ratio(50),
     backgroundColor: Colors.lightMode.white,
     // alignSelf: 'center',
-    // marginBottom: Metrics.ratio(20)
+    marginBottom: Metrics.ratio(30),
+    position: 'absolute',
+    bottom: 0,
   },
 
   mainRender: {},
@@ -33,6 +35,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: Colors.lightMode.pink,
+    alignItems: 'center',
   },
 
   titleTextStyle: {
@@ -43,40 +46,44 @@ const styles = StyleSheet.create({
     tintColor: Colors.lightMode.white,
   },
 
-  textStyle:{
-    color: Colors.lightMode.pink
+  textStyle: {
+    color: Colors.lightMode.pink,
   },
 
-  textInputStyle:{
+  textInputStyle: {
     fontSize: Metrics.ratio(48),
     color: Colors.lightMode.white,
-    fontWeight:'500'
+    fontWeight: '500',
   },
 
-  textInputRow:{
+  textInputRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: Metrics.screenWidth * 0.9,
     alignSelf: 'center',
-    marginTop: Metrics.ratio(40)
+    marginTop: Metrics.ratio(40),
   },
 
-  dollarSignText:{
+  dollarSignText: {
     fontSize: Metrics.ratio(48),
     color: Colors.lightMode.white,
-    fontWeight:'500'
+    fontWeight: '500',
   },
 
-  enterAmountText:{
-    color: Colors.lightMode.white,
-    fontWeight: '500'
-  },
-
-  availableAmountText:{
+  enterAmountText: {
     color: Colors.lightMode.white,
     fontWeight: '500',
-    marginTop: Metrics.ratio(30)
+  },
+
+  availableAmountText: {
+    color: Colors.lightMode.white,
+    fontWeight: '500',
+    marginTop: Metrics.ratio(30),
+  },
+
+  headerContainer: {
+    marginTop: Metrics.ratio(30),
   },
 });
 

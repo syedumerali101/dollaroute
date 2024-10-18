@@ -37,11 +37,11 @@ function ProfileStack() {
         name="AddPayment"
         component={AddPayment}
       />
-       <Stack.Screen
+       {/* <Stack.Screen
         options={{headerShown: false}}
         name="Withdraw"
         component={Withdraw}
-      />
+      /> */}
          <Stack.Screen
         options={{headerShown: false}}
         name="WithdrawTo"
