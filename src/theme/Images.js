@@ -33,6 +33,10 @@ const common = {
   tick: require('../assets/tick.png'),
   cardScan: require('../assets/cardScan.png'),
   plus: require('../assets/plus.png'),
+  invite: require('../assets/invite.png'),
+  star: require('../assets/star.png'),
+  earning: require('../assets/earning.png'),
+
 
 };
 
@@ -86,6 +90,7 @@ const dummy = {
   airbn: require('../assets/airbn.png'),
   dummyDetailBanner: require('../assets/dummyDetailBanner.jpeg'),
   barcode: require('../assets/barcode.png'),
+  inviteFriends: require('../assets/inviteFriends.png'),
 
 };
 

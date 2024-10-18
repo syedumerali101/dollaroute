@@ -8,6 +8,7 @@ import AddPayment from '../screens/AddPayment';
 import Withdraw from '../screens/Withdraw';
 import WithdrawTo from '../screens/WithdrawTo';
 import ReviewSummary from '../screens/ReviewSummary';
+import InviteFriends from '../screens/InviteFriends';
 
 function ProfileStack() {
   const Stack = createStackNavigator();
@@ -52,6 +53,11 @@ function ProfileStack() {
         options={{headerShown: false}}
         name="ReviewSummary"
         component={ReviewSummary}
+      />
+       <Stack.Screen
+        options={{headerShown: false}}
+        name="InviteFriends"
+        component={InviteFriends}
       />
     </Stack.Navigator>
   );

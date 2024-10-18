@@ -452,7 +452,7 @@ export const detailsData = () => [
 export const GeneralList = () => [
   {title: 'Account Information', route: 'AccountInfo'},
   {title: 'Cashback Withdrawal', route: 'CashBack'},
-  {title: 'Referral', route: 'Referral'},
+  {title: 'Referral', route: 'InviteFriends'},
   {title: 'Settings', route: 'Settings'},
 ];
 export const SupportList = () => [
@@ -556,3 +556,19 @@ export const paymentMethods = () => [
     icon: Images.signupScreen.google,
   },
 ];
+
+export const inviteFriendsPoints = () => [
+  {
+    id: 1,
+    title: 'Invite your friends',
+    description: "Send your friends your personal invite link.",
+    icon: Images.common.star
+  },
+
+  {
+    id: 2,
+    title: 'You get free $50',
+    description: "When they join DollaRoute. you get $50  ",
+    icon: Images.common.star
+  },
+]

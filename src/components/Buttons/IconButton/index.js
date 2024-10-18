@@ -3,15 +3,15 @@ import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {Colors, Metrics} from '../../../theme';
 import Text from '../../Text';
 
-const IconButton = ({title, icon, onPress, mainBtnContainer}) => {
+const IconButton = ({title, icon, onPress, mainBtnContainer, textStyle}) => {
   return (
-    <TouchableOpacity activeOpacity={1} style={[styles.mainBtnContainer, mainBtnContainer]}>
+    <TouchableOpacity onPress={onPress} activeOpacity={1} style={[styles.mainBtnContainer, mainBtnContainer]}>
       <View style={styles.iconView}>
         <Image source={icon} style={styles.iconStyle} />
       </View>
 
       <View style={styles.titleView}>
-        <Text size='eighteen' style={styles.titleText}>{title}</Text>
+        <Text size='eighteen' style={[styles.titleText, textStyle]}>{title}</Text>
       </View>
     </TouchableOpacity>
   );

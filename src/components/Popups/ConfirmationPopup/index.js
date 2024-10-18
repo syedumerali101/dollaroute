@@ -9,7 +9,7 @@ import Images from '../../../theme/Images';
 import SubmitButton from '../../Buttons/SubmitButton';
 
 const ConfirmationPopup = props => {
-  const {loading, width, height, onNo, onYes, title, description, hideYesBtn, mainWhiteContainer, secondBtnStyle} =
+  const {loading, width, height, onNo, onYes, title, description, hideYesBtn, mainWhiteContainer, secondBtnStyle, icon} =
     props;
   return (
     <Modal
@@ -29,7 +29,7 @@ const ConfirmationPopup = props => {
         <View style={[styles.loaderView, mainWhiteContainer]}>
           <Image
             style={styles.redeemIconStyle}
-            source={Images.common.redeemIcon}
+            source={icon ? icon : Images.common.redeemIcon}
           />
 
           <Text size="eighteen" style={styles.titleText}>
