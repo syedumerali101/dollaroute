@@ -36,8 +36,9 @@ const common = {
   invite: require('../assets/invite.png'),
   star: require('../assets/star.png'),
   earning: require('../assets/earning.png'),
-
-
+  email: require('../assets/email.png'),
+  chat: require('../assets/chat.png'),
+  call: require('../assets/call.png'),
 };
 
 const welcomeScreen = {

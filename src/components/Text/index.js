@@ -37,8 +37,8 @@ const Text = (props) => {
   }
 
   const textColorOrange = Colors.lightMode.pink;
-  const textColorBlack = color ? color : 'black1';
-  const textColorWhite = color ? color : 'white1';
+  const textColorBlack = color ? color : Colors.lightMode.black1;
+  const textColorWhite = color ? color : Colors.lightMode.white;
 
   const appliedColor = orange
     ? textColorOrange

@@ -458,7 +458,7 @@ export const GeneralList = () => [
 export const SupportList = () => [
   {title: 'Terms and Privacy Policy', route: 'PrivacyPolicy'},
   {title: 'FAQ', route: 'FAQ'},
-  {title: 'Help', route: 'Help'},
+  {title: 'Help', route: 'NeedHelp'},
 ];
 
 export const cashbackData = () => [
@@ -570,6 +570,28 @@ export const inviteFriendsPoints = () => [
     title: 'You get free $50',
     description: "When they join DollaRoute. you get $50  ",
     icon: Images.common.star
+  },
+]
+
+export const helpData = () => [
+  {
+    id: 1,
+    title: 'Contact us via email',
+    icon: Images.common.email
+  },
+
+  {
+    id: 2,
+    title: 'Call us',
+    icon: Images.common.call
+
+  },
+
+  {
+    id: 3,
+    title: 'Chat with us',
+    icon: Images.common.chat
+
   },
 ]
 
