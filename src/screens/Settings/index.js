@@ -1,27 +1,39 @@
 import React, {useRef, useState} from 'react';
-import {ScrollView, View, Image} from 'react-native';
+import {ScrollView, View, Image, TouchableOpacity} from 'react-native';
 import en from '../../translations/en.json';
 import Header from '../../components/Header';
 import styles from './styles';
+import SwitchButton from '../../components/Buttons/SwitchButton';
 import Text from '../../components/Text';
-import Images from '../../theme/Images';
-import IconButton from '../../components/Buttons/IconButton';
-import {inviteFriendsPoints} from '../../configs/Constants';
-import ConfirmationPopup from '../../components/Popups/ConfirmationPopup';
-import {navigateAndSimpleReset} from '../../utils/navigation';
 
 const Settings = ({navigation}) => {
-  const [earnedModal, setEarnedModal] = useState(false);
   const scrollViewRef = useRef(null);
+  const [settingsData, setSettingsData] = useState([
+    {
+      id: 1,
+      title: 'Two-Factor Authentication',
+      show: true,
+    },
 
-  const handleNavigateBack = () => {
-    setEarnedModal(false);
-    navigateAndSimpleReset('ProfileScreen', 0);
-  };
+    {
+      id: 2,
+      title: 'Push Notifications',
+      show: false,
+    },
 
-  const onSubmit = () => {
-    setEarnedModal(true)
+    {
+      id: 3,
+      title: 'Email Notifications',
+      show: false,
+    },
+  ]);
+
+  const hanldeSwitch = (show, index) => {
+    const tempSettingsData = [...settingsData];
+    tempSettingsData[index].show = show;
+    setSettingsData(tempSettingsData)
   }
+
   const mainRender = () => {
     return (
       <ScrollView
@@ -30,6 +42,18 @@ const Settings = ({navigation}) => {
         ref={scrollViewRef}
         contentContainerStyle={styles.contentContainerStyle}
         style={styles.mainRenderContainer}>
+        <TouchableOpacity activeOpacity={1} style={styles.btnStyle}>
+          <Text size="fourteen" style={styles.btnTextStyle}>
+            Change Password
+          </Text>
+        </TouchableOpacity>
+        {settingsData?.map((item, index) => {
+          return <SwitchButton 
+          title={item?.title} 
+          show={item?.show} 
+          onPress={(show) => hanldeSwitch(show, index)}
+          />;
+        })}
       </ScrollView>
     );
   };
@@ -38,7 +62,6 @@ const Settings = ({navigation}) => {
     <View style={styles.mainContainer}>
       <Header title={en.navTitles.settings} />
       {mainRender()}
-
     </View>
   );
 };

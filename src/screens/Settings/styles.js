@@ -17,6 +17,21 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.lightMode.white,
   },
 
+  mainSwitchButtonsContainer:{
+    // width: Metrics.screenWidth * 0.9,
+  },
+
+  btnTextStyle: {
+    color: Colors.lightMode.black8,
+    fontWeight: '500',
+    fontSize: Metrics.ratio(14),
+  },
+
+  btnStyle:{
+    width: Metrics.screenWidth * 0.9,
+    marginTop: Metrics.ratio(10)
+  }
+
   
 });
 

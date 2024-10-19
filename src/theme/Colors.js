@@ -41,6 +41,7 @@ const lightMode = {
   black5: '#212429',
   black6: '#404040',
   black7: '#0C1A30',
+  black8: '#1D2939',
   textColor: "#020708",
   white: '#FFFFFF',
   white2: '#FFFAF5',
