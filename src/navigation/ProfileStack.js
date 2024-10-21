@@ -11,6 +11,7 @@ import ReviewSummary from '../screens/ReviewSummary';
 import InviteFriends from '../screens/InviteFriends';
 import Settings from '../screens/Settings';
 import NeedHelp from '../screens/NeedHelp';
+import FAQ from '../screens/FAQ';
 
 function ProfileStack() {
   const Stack = createStackNavigator();
@@ -73,6 +74,8 @@ function ProfileStack() {
         name="NeedHelp"
         component={NeedHelp}
       />
+
+      <Stack.Screen options={{headerShown: false}} name="FAQ" component={FAQ} />
     </Stack.Navigator>
   );
 }
